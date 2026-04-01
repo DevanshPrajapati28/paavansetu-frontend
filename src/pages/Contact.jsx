@@ -11,6 +11,8 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import SendIcon from '@mui/icons-material/Send';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 
+const API = process.env.REACT_APP_API_URL;
+
 gsap.registerPlugin(ScrollTrigger);
 
 /* ─── TOKENS ─────────────────────────────────────────────────────────────── */
