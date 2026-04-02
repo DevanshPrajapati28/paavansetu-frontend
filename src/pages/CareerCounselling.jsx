@@ -234,7 +234,9 @@ export default function CareerCounselling() {
               </Box>
 
               <Box className="cc2-hero-anim" sx={{ display:'flex', justifyContent:'center', gap:2, flexWrap:'wrap', opacity:0 }}>
-                <a className="cc2-btn-wa" href="https://wa.me/916351113766" target="_blank" rel="noreferrer">
+                <a className="cc2-btn-wa" href="https://wa.me/916351113766?text=Hello%2C%20I%20would%20like%20to%20book%20a%20career%20counselling%20session.%20Please%20share%20available%20slots%2C%20fees%2C%20and%20further%20details." 
+                  target="_blank" 
+                  rel="noreferrer">
                   <WhatsAppIcon sx={{ fontSize:20 }} />
                   Book via WhatsApp
                 </a>
