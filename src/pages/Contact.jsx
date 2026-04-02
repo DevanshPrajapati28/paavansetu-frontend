@@ -325,7 +325,11 @@ export default function Contact() {
                       <Typography sx={{ color:T.ash, fontSize:'0.72rem', fontWeight:700, letterSpacing:'1.5px', textTransform:'uppercase' }}>WhatsApp / Call</Typography>
                     </Box>
                     <Typography sx={{ color:T.ink, fontWeight:700, fontSize:'1.1rem', mb:1.5 }}>+91 63511-13766</Typography>
-                    <a href="https://wa.me/916351113766" target="_blank" rel="noreferrer" className="ct-action-link" style={{ color:T.wa, borderColor:T.waMid, background:'#fff' }}>
+                    <a href="https://wa.me/916351113766?text=Hello%2C%20I%20would%20like%20to%20connect%20with%20you%20and%20get%20more%20information%20about%20your%20programs.%20Please%20guide%20me." 
+                      target="_blank" 
+                      rel="noreferrer" 
+                      className="ct-action-link" 
+                      style={{ color:T.wa, borderColor:T.waMid, background:'#fff' }}>
                       <WhatsAppIcon style={{ fontSize:14 }} />
                       Chat Now
                     </a>
