@@ -536,7 +536,10 @@ export default function Contact() {
             <Typography sx={{ color:T.ash, fontSize:'1rem', mb:4, lineHeight:1.8 }}>
               No forms needed — just drop us a WhatsApp message and we&apos;ll respond right away.
             </Typography>
-            <a href="https://wa.me/916351113766" target="_blank" rel="noreferrer" style={{
+            <a href="https://wa.me/916351113766?text=Hello%2C%20I%20am%20reaching%20out%20through%20your%20website.%20I%20would%20like%20to%20get%20more%20information%20about%20your%20services%20and%20discuss%20my%20requirements." 
+              target="_blank" 
+              rel="noreferrer" 
+              style={{
               display:'inline-flex', alignItems:'center', justifyContent:'center', gap:8,
               background:T.wa, color:'#fff', border:'none', borderRadius:50,
               padding:'15px 40px', fontSize:'1rem', fontWeight:700,
