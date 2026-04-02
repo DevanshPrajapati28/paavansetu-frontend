@@ -322,7 +322,10 @@ export default function Home() {
                     Explore Programs
                     <ArrowForwardIcon style={{ fontSize:18 }} />
                   </Link>
-                  <a href="https://wa.me/916351113766" target="_blank" rel="noreferrer" className="hm-btn-wa">
+                  <a href="https://wa.me/916351113766?text=Hello%2C%20I%20am%20interested%20in%20your%20programs%20for%20my%20child.%20Please%20share%20details%20about%20courses%2C%20fees%2C%20and%20upcoming%20sessions." 
+                    target="_blank" 
+                    rel="noreferrer" 
+                    className="hm-btn-wa">
                     <WhatsAppIcon style={{ fontSize:20 }} />
                     WhatsApp
                   </a>
