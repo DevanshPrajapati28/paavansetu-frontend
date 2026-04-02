@@ -580,7 +580,9 @@ export default function SchoolsWorkshops() {
               </Typography>
 
               <Box sx={{ display:'flex', justifyContent:'center', gap:2.5, flexWrap:'wrap', mb:5 }}>
-                <a className="sw-btn-green-pill" href="https://wa.me/916351113766" target="_blank" rel="noreferrer">
+                <a className="sw-btn-green-pill" href="https://wa.me/916351113766?text=Hello%2C%20I%20would%20like%20to%20understand%20which%20program%20would%20be%20best%20for%20me%2Fmy%20child.%20Could%20you%20please%20guide%20me%3F" 
+                  target="_blank" 
+                  rel="noreferrer">
                   <WhatsAppIcon sx={{ fontSize:20 }} />
                   Chat on WhatsApp
                 </a>
