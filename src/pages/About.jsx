@@ -570,7 +570,10 @@ export default function About() {
                 <Link to="/contact" className="ab-btn-blue">
                   Get in Touch
                 </Link>
-                <a href="https://wa.me/916351113766" target="_blank" rel="noreferrer" className="ab-btn-outline">
+                <a href="https://wa.me/916351113766?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20your%20organization%20and%20the%20services%20you%20offer.%20Kindly%20provide%20more%20details." 
+                  target="_blank" 
+                  rel="noreferrer" 
+                  className="ab-btn-outline">
                   WhatsApp Us
                 </a>
               </Box>
