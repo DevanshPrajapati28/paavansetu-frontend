@@ -118,7 +118,7 @@ export default function Footer() {
             
             <Box sx={{ display: 'flex', gap: 1 }}>
               {[
-                { icon: <WhatsAppIcon />, color: '#25D366', href: 'https://wa.me/6351113766' },
+                { icon: <WhatsAppIcon />, color: '#25D366', href: 'https://wa.me/6351113766?text=Hello%2C%20I%20visited%20your%20website%20and%20would%20like%20to%20know%20more%20about%20your%20programs%20and%20services.%20Please%20assist%20me.' },
                 { icon: <InstagramIcon />, color: '#E1306C', href: 'https://www.instagram.com/paavansetu.official?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' },
                 { icon: <FacebookIcon />, color: '#1877F2', href: 'https://www.facebook.com/share/18NLzSmM16/' },
               ].map((s, i) => (
