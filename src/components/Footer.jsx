@@ -351,9 +351,38 @@ export default function Footer() {
           gap: 1,
           textAlign: 'center',
         }}>
+
+          {/* Left */}
           <Typography sx={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.82rem' }}>
             © {new Date().getFullYear()} Paavan SETU. All rights reserved.
           </Typography>
+
+          {/* Center (NEW) */}
+          <Typography sx={{ 
+          color: 'rgba(255,255,255,0.55)', 
+          fontSize: '0.82rem',
+          fontWeight: 500,
+        }}>
+          Designed & Developed by{' '}
+          <MuiLink
+            href="https://www.logicmindsbyparii.com/"
+            target="_blank"
+            rel="noreferrer"
+            sx={{
+              color: '#F4B942',
+              fontWeight: 600,
+              textDecoration: 'none',
+              '&:hover': {
+                textDecoration: 'underline',
+                color: '#FFE5B4',
+              },
+            }}
+          >
+            Logicminds by parii
+          </MuiLink>
+        </Typography>
+
+          {/* Right */}
           <Typography sx={{ 
             color: 'rgba(255,255,255,0.45)', 
             fontSize: '0.82rem',
@@ -367,6 +396,7 @@ export default function Footer() {
               animation: 'twinkle 1.5s ease-in-out infinite',
             }}>🌟</span>
           </Typography>
+
         </Box>
       </Container>
       
