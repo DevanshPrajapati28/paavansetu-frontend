@@ -282,7 +282,9 @@ export default function SchoolsWorkshops() {
                   <CalendarTodayIcon sx={{ fontSize:18 }} />
                   Schedule a Workshop
                 </Link>
-                <a className="sw-btn-wa" href="https://wa.me/916351113766" target="_blank" rel="noreferrer">
+                <a className="sw-btn-wa" href="https://wa.me/916351113766?text=Hello%2C%20I%20am%20interested%20in%20organizing%20a%20workshop%20at%20our%20school.%20Kindly%20share%20details%20about%20your%20programs%2C%20pricing%2C%20and%20available%20schedules." 
+                  target="_blank" 
+                  rel="noreferrer">
                   <WhatsAppIcon sx={{ fontSize:18 }} />
                   WhatsApp Us
                 </a>
