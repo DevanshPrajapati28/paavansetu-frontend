@@ -256,7 +256,10 @@ export default function Contact() {
 
               {/* Quick-action buttons row */}
               <Box className="ct-hero-anim" sx={{ display:'flex', justifyContent:'center', gap:2, flexWrap:'wrap', opacity:0 }}>
-                <a href="https://wa.me/916351113766" target="_blank" rel="noreferrer" style={{
+                <a href="https://wa.me/916351113766?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20your%20organization%20and%20the%20services%20you%20offer.%20Kindly%20provide%20more%20details." 
+                  target="_blank" 
+                  rel="noreferrer" 
+                  style={{
                   display:'inline-flex', alignItems:'center', gap:8,
                   background:T.wa, color:'#fff', border:'none', borderRadius:50,
                   padding:'12px 28px', fontSize:'0.92rem', fontWeight:700,
