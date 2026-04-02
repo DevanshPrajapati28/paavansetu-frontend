@@ -503,7 +503,7 @@ export default function CareerCounselling() {
                 Surat (in-person) &bull; Online across India
               </Typography>
               <Box sx={{ display:'flex', justifyContent:'center', gap:2, flexWrap:'wrap', mb:4 }}>
-                <a className="cc2-btn-green" href="https://wa.me/916351113766" target="_blank" rel="noreferrer">
+                <a className="cc2-btn-green" href="https://wa.me/916351113766?text=Hello%2C%20I%20would%20like%20to%20book%20a%20counselling%20session.%20Please%20guide%20me%20with%20available%20slots%20and%20next%20steps." target="_blank" rel="noreferrer">
                   <WhatsAppIcon sx={{ fontSize:20 }} />
                   Book a Session
                 </a>
