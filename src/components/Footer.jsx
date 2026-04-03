@@ -62,7 +62,7 @@ export default function Footer() {
               <Box
                 component="img"
                 src={logo}
-                alt="Paavan SETU Logo"
+                alt="Paavan Setu Logo"
                 sx={{
                   width: { xs: 100, sm: 120, md: 140 },
                   height: { xs: 100, sm: 120, md: 140 },
@@ -94,7 +94,7 @@ export default function Footer() {
                     textShadow: '2px 2px 4px rgba(0,0,0,0.1)',
                   }}
                 >
-                  Paavan SETU
+                  Paavan Setu
                 </Typography>
                 <Typography
                   sx={{
@@ -295,7 +295,7 @@ export default function Footer() {
                 <EmailIcon sx={{ color: '#F4B942', fontSize: 22, mt: 0.2 }} />
                 <Box>
                   <Typography sx={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.88rem' }}>Email Us</Typography>
-                  <Typography sx={{ color: 'white', fontSize: '0.95rem', fontWeight: 600 }}>careerhatch2024@gmail.com</Typography>
+                  <Typography sx={{ color: 'white', fontSize: '0.95rem', fontWeight: 600 }}>paavan.setu@gmail.com</Typography>
                 </Box>
               </Box>
             </Box>
@@ -354,7 +354,7 @@ export default function Footer() {
 
           {/* Left */}
           <Typography sx={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.82rem' }}>
-            © {new Date().getFullYear()} Paavan SETU. All rights reserved.
+            © {new Date().getFullYear()} Paavan Setu. All rights reserved.
           </Typography>
 
           {/* Center (NEW) */}
