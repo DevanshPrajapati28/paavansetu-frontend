@@ -566,11 +566,11 @@ export default function Books() {
                         <Box sx={{ p:3, flexGrow:1, display:'flex', flexDirection:'column' }}>
 
                           {/* Audience + pages row */}
-                          <Box sx={{ display:'flex', justifyContent:'space-between', alignItems:'center', mb:1.8 }}>
+                          {/* <Box sx={{ display:'flex', justifyContent:'space-between', alignItems:'center', mb:1.8 }}>
                             <Box sx={{ bgcolor:book.accentBg, border:'1px solid '+book.accentBorder, color:book.accentCol, px:1.4, py:0.4, borderRadius:99, fontSize:'0.7rem', fontWeight:700 }}>
                               {book.audience}
                             </Box>
-                          </Box>
+                          </Box> */}
 
                           {/* Title */}
                           <Typography sx={{ fontFamily:"'Playfair Display',serif", color:T.ink, fontWeight:600, fontSize:'1.2rem', mb:0.4, lineHeight:1.3 }}>
