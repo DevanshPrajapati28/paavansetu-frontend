@@ -144,7 +144,7 @@ var BOOKS = [
     }
   },
   {
-    title:    'Hanuman Chalisa for Kids',
+    title:    'Hanuman Chalisa',
     subtitle: 'Primary / Middle School',
     desc:     'This book gently answers those questions. Through simple meanings, inspiring stories from Hanuman’s life, relatable value-based tales, and thoughtful activities, children don’t just chant—they understand.',
     audience: 'Class 7-10',
