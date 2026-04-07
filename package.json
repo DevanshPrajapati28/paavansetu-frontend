@@ -1,5 +1,6 @@
 {
   "name": "paavan-setu-client",
+  "homepage": "https://paavansetu.com",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
