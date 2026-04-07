@@ -272,7 +272,7 @@ export default function Contact() {
                   <WhatsAppIcon style={{ fontSize:20 }} />
                   WhatsApp Us
                 </a>
-                <a href="mailto:careerhatch2024@gmail.com" style={{
+                <a href="mailto:paavan.setu@gmail.com" style={{
                   display:'inline-flex', alignItems:'center', gap:8,
                   background:'transparent', color:T.blue,
                   border:'2px solid '+T.blue, borderRadius:50,
@@ -344,8 +344,8 @@ export default function Contact() {
                       </Box>
                       <Typography sx={{ color:T.ash, fontSize:'0.72rem', fontWeight:700, letterSpacing:'1.5px', textTransform:'uppercase' }}>Email Us</Typography>
                     </Box>
-                    <Typography sx={{ color:T.ink, fontWeight:700, fontSize:'0.95rem', mb:1.5, wordBreak:'break-all' }}>careerhatch2024@gmail.com</Typography>
-                    <a href="mailto:careerhatch2024@gmail.com" className="ct-action-link" style={{ color:T.blue, borderColor:T.blueMid, background:'#fff' }}>
+                    <Typography sx={{ color:T.ink, fontWeight:700, fontSize:'0.95rem', mb:1.5, wordBreak:'break-all' }}>paavan.setu@gmail.com</Typography>
+                    <a href="mailto:paavan.setu@gmail.com" className="ct-action-link" style={{ color:T.blue, borderColor:T.blueMid, background:'#fff' }}>
                       <EmailIcon style={{ fontSize:14 }} />
                       Send Email
                     </a>
