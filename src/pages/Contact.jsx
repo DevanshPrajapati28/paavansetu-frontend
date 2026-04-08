@@ -161,6 +161,7 @@ export default function Contact() {
   }
 
   async function handleSubmit() {
+    console.log("API URL:", API); 
     if (!formData.name || !formData.phone) {
       setSnack({
         open: true,
