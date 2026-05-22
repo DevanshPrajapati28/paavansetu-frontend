@@ -2,24 +2,22 @@ import React, { useState, useEffect, useRef } from 'react';
 import {
   AppBar, Toolbar, Box, Button, IconButton, Drawer,
   List, ListItem, ListItemText, useScrollTrigger, Slide,
-  useTheme, useMediaQuery
+  useTheme, useMediaQuery, Container
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import { Link, useLocation } from 'react-router-dom';
 import { gsap } from 'gsap';
-import logo from '../assets/logo_final.png'; // Make sure this path is correct
+import logo from '../assets/logo_final.png';
 
 const navLinks = [
   { label: 'Home', path: '/' },
   { label: 'Career Counselling', path: '/career-counselling' },
-  {label:'Psychometric Test', path:'/test'},
+  { label: 'Psychometric Test', path: '/test' },
   { label: 'Books', path: '/books' },
   { label: 'Schools & Workshops', path: '/schools-workshops' },
   { label: 'About', path: '/about' },
   { label: 'Contact', path: '/contact' }
-  
-
 ];
 
 function HideOnScroll({ children }) {
@@ -38,7 +36,6 @@ export default function Navbar() {
   const location = useLocation();
 
   useEffect(() => {
-    // Entrance animation
     gsap.fromTo(logoRef.current,
       { opacity: 0, x: -30 },
       { opacity: 1, x: 0, duration: 0.8, ease: 'power3.out', delay: 0.2 }
@@ -59,132 +56,142 @@ export default function Navbar() {
     <HideOnScroll>
       <AppBar
         ref={navRef}
-        elevation={scrolled ? 4 : 0}
+        elevation={scrolled ? 2 : 0}
         sx={{
           background: scrolled
-            ? 'rgba(255,255,255,0.97)'
-            : 'rgba(255,255,255,0.95)',
-          backdropFilter: 'blur(20px)',
-          borderBottom: scrolled ? 'none' : '1px solid rgba(14,101,45,0.1)',
+            ? 'rgba(255,255,255,0.98)'
+            : 'rgba(255,255,255,0.96)',
+          backdropFilter: 'blur(10px)',
+          borderBottom: '1px solid rgba(0,0,0,0.05)',
           transition: 'all 0.4s ease',
-          boxShadow: scrolled ? '0 4px 30px rgba(14,101,45,0.12)' : 'none',
+          boxShadow: scrolled ? '0 4px 20px rgba(0,0,0,0.06)' : 'none',
         }}
       >
-        <Toolbar sx={{ py: 1, px: { xs: 2, md: 4 } }}>
-          {/* Logo - moved right with margin left */}
-          <Box 
-            ref={logoRef} 
-            component={Link} 
-            to="/" 
-            sx={{ 
-              display: 'flex', 
-              alignItems: 'center', 
-              textDecoration: 'none',
-              ml: { xs: 2, md: 27 }, // Responsive margin left
-              mr: { xs: 1, md: 2 }, // Space between logo and nav links
-            }}
-          >
-            <Box
-              component="img"
-              src={logo}
-              alt="Paavan SETU"
+        <Container maxWidth="xl">
+          <Toolbar sx={{ 
+            py: 1, 
+            display: 'flex', 
+            justifyContent: 'center',
+            alignItems: 'center',
+            position: 'relative',
+            minHeight: '80px'
+          }}>
+            {/* Logo - Moved more to the right */}
+            <Box 
+              ref={logoRef} 
+              component={Link} 
+              to="/" 
               sx={{ 
-                height: 52,
-                width: 'auto', 
-                objectFit: 'contain',
-                transform: {
-                  xs: 'scale(1.5)',
-                  md: 'scale(2.0)'
-                },
-                transformOrigin: 'center center',
+                display: 'flex', 
+                alignItems: 'center', 
+                textDecoration: 'none',
+                position: 'absolute',
+                left: '210px', // Increased from 0 to 80px to move logo right
               }}
-            />
-          </Box>
-
-          {/* Desktop Nav Links - now with left alignment */}
-          {!isMobile && (
-            <Box sx={{ 
-              display: 'flex', 
-              alignItems: 'center', 
-              gap: 0.5,
-              flex: 1, // Take remaining space
-              ml: 3, // Pull links slightly left
-            }}>
-              {navLinks.map((link, i) => (
-                <Button
-                  key={link.path}
-                  ref={el => linksRef.current[i] = el}
-                  component={Link}
-                  to={link.path}
-                  sx={{
-                    color: location.pathname === link.path ? '#0e652d' : '#3D2B50',
-                    fontSize: '0.78rem',
-                    fontWeight: location.pathname === link.path ? 700 : 500,
-                    letterSpacing: '0.06em',
-                    textTransform: 'uppercase',
-                    padding: '6px 14px',
-                    borderRadius: '4px',
-                    position: 'relative',
-                    fontFamily: '"Lato", sans-serif',
-                    '&::after': {
-                      content: '""',
-                      position: 'absolute',
-                      bottom: 2,
-                      left: '50%',
-                      transform: location.pathname === link.path ? 'translateX(-50%) scaleX(1)' : 'translateX(-50%) scaleX(0)',
-                      width: '60%',
-                      height: '2px',
-                      background: 'linear-gradient(90deg, #0e652d, #7B2D8B)',
-                      transition: 'transform 0.3s ease',
-                      borderRadius: '2px',
-                    },
-                    '&:hover': {
-                      background: 'rgba(14,101,45,0.06)',
-                      color: '#0e652d',
-                      '&::after': { transform: 'translateX(-50%) scaleX(1)' },
-                    },
-                    transition: 'all 0.25s ease',
-                  }}
-                >
-                  {link.label}
-                </Button>
-              ))}
+            >
+              <Box
+                component="img"
+                src={logo}
+                alt="Paavan SETU"
+                sx={{ 
+                  height: 52,
+                  width: 'auto', 
+                  objectFit: 'contain',
+                  transform: {
+                    xs: 'scale(1.5)',
+                    md: 'scale(2.0)'
+                  },
+                  transformOrigin: 'center center',
+                }}
+              />
             </Box>
-          )}
 
-          {/* Book Session Button - on the right */}
-          {!isMobile && (
-            <Button
-              component={Link}
-              to="/contact"
-              variant="contained"
-              sx={{ 
-                ml: 2, 
-                fontSize: '0.75rem',
-                bgcolor: '#0e652d',
-                flexShrink: 0, // Prevent button from shrinking
-                '&:hover': {
-                  bgcolor: '#0a4d22',
-                }
-              }}
-            >
-              Book Session
-            </Button>
-          )}
+            {/* Desktop Nav Links - Centered */}
+            {!isMobile && (
+              <Box sx={{ 
+                display: 'flex', 
+                alignItems: 'center', 
+                justifyContent: 'center',
+                gap: 0.5,
+              }}>
+                {navLinks.map((link, i) => (
+                  <Button
+                    key={link.path}
+                    ref={el => linksRef.current[i] = el}
+                    component={Link}
+                    to={link.path}
+                    sx={{
+                      color: location.pathname === link.path ? '#0e652d' : '#4a5568',
+                      fontSize: '0.78rem',
+                      fontWeight: location.pathname === link.path ? 700 : 500,
+                      letterSpacing: '0.06em',
+                      textTransform: 'uppercase',
+                      padding: '6px 14px',
+                      borderRadius: '4px',
+                      position: 'relative',
+                      fontFamily: '"Lato", sans-serif',
+                      '&::after': {
+                        content: '""',
+                        position: 'absolute',
+                        bottom: 2,
+                        left: '50%',
+                        transform: location.pathname === link.path ? 'translateX(-50%) scaleX(1)' : 'translateX(-50%) scaleX(0)',
+                        width: '60%',
+                        height: '2px',
+                        background: '#0e652d',
+                        transition: 'transform 0.3s ease',
+                        borderRadius: '2px',
+                      },
+                      '&:hover': {
+                        background: 'rgba(14,101,45,0.06)',
+                        color: '#0e652d',
+                        '&::after': { transform: 'translateX(-50%) scaleX(1)' },
+                      },
+                      transition: 'all 0.25s ease',
+                    }}
+                  >
+                    {link.label}
+                  </Button>
+                ))}
+              </Box>
+            )}
 
-          {/* Mobile Menu Icon */}
-          {isMobile && (
-            <IconButton 
-              onClick={() => setDrawerOpen(true)} 
-              sx={{ 
-                color: '#0e652d',
-                ml: 'auto', // Push to right on mobile
-              }}
-            >
-              <MenuIcon />
-            </IconButton>
-          )}
-        </Toolbar>
+            {/* Book Session Button - Right side */}
+            {!isMobile && (
+              <Button
+                component={Link}
+                to="/contact"
+                variant="contained"
+                sx={{ 
+                  position: 'absolute',
+                  right: '120px',
+                  fontSize: '0.75rem',
+                  bgcolor: '#0e652d',
+                  flexShrink: 0,
+                  '&:hover': {
+                    bgcolor: '#0a4d22',
+                  }
+                }}
+              >
+                Book Session
+              </Button>
+            )}
+
+            {/* Mobile Menu Icon */}
+            {isMobile && (
+              <IconButton 
+                onClick={() => setDrawerOpen(true)} 
+                sx={{ 
+                  color: '#0e652d',
+                  position: 'absolute',
+                  right: 0,
+                }}
+              >
+                <MenuIcon />
+              </IconButton>
+            )}
+          </Toolbar>
+        </Container>
 
         {/* Mobile Drawer */}
         <Drawer
@@ -200,7 +207,6 @@ export default function Navbar() {
           }}
         >
           <Box sx={{ p: 2, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-            {/* Logo in mobile drawer */}
             <Box
               sx={{
                 background: '#ffffff',
@@ -260,17 +266,16 @@ export default function Navbar() {
             ))}
           </List>
           
-          {/* Book Session button in mobile drawer */}
           <Box sx={{ p: 3, mt: 'auto' }}>
             <Button
               component={Link}
-              to="/career-counselling"
+              to="/contact"
               variant="contained"
               fullWidth
               onClick={() => setDrawerOpen(false)}
               sx={{
                 bgcolor: 'white',
-                color: '#ffffff',
+                color: '#0e652d',
                 '&:hover': {
                   bgcolor: 'rgba(255,255,255,0.9)',
                 }
