@@ -58,11 +58,11 @@ export default function Navbar() {
         ref={navRef}
         elevation={scrolled ? 2 : 0}
         sx={{
-          background: scrolled
-            ? 'rgba(255,255,255,0.98)'
-            : 'rgba(255,255,255,0.96)',
+          background: scrolled 
+  ? '#d4edda'   // or '#c8dff0' – whichever you prefer
+  : 'linear-gradient(145deg, #d4edda 0%, #c8dff0 100%)',
           backdropFilter: 'blur(10px)',
-          borderBottom: '1px solid rgba(0,0,0,0.05)',
+          // borderBottom: '1px solid rgba(0,0,0,0.05)',
           transition: 'all 0.4s ease',
           boxShadow: scrolled ? '0 4px 20px rgba(0,0,0,0.06)' : 'none',
         }}
