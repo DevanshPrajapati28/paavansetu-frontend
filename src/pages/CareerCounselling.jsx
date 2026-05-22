@@ -20,22 +20,22 @@ import RemoveIcon from '@mui/icons-material/Remove';
 gsap.registerPlugin(ScrollTrigger);
 
 var T = {
-  green:    '#0e652d',
-  greenLt:  '#e6f4eb',
-  greenMid: '#c8e8d2',
-  blue:     '#1f5b87',
-  blueLt:   '#e4eef6',
-  blueMid:  '#c2d9ee',
-  amber:    '#d4891a',
-  amberLt:  '#fdf0d8',
-  amberMid: '#f5d8a0',
+  green:    '#0a4f22',        // darker (was #0e652d)
+  greenLt:  '#c8e8d2',        // darker (was #e6f4eb)
+  greenMid: '#96cead',        // darker (was #c8e8d2)
+  blue:     '#174a72',        // darker (was #1f5b87)
+  blueLt:   '#c4d9ec',        // darker (was #e4eef6)
+  blueMid:  '#90b8d8',        // darker (was #c2d9ee)
+  amber:    '#b06e10',        // darker (was #d4891a)
+  amberLt:  '#f5d9a0',        // darker (was #fdf0d8)
+  amberMid: '#e8b86d',        // darker (was #f5d8a0)
   white:    '#ffffff',
-  snow:     '#fafdf7',
-  cream:    '#fdf8f0',
-  parchment:'#f5f0e8',
-  ink:      '#1a2a1a',
-  slate:    '#3d5a4a',
-  ash:      '#6b7c72',
+  snow:     '#eef6f0',        // darker (was #fafdf7)
+  cream:    '#f5ede0',        // darker (was #fdf8f0)
+  parchment:'#ece5d6',        // darker (was #f5f0e8)
+  ink:      '#111d11',
+  slate:    '#2d4a38',        // darker (was #3d5a4a)
+  ash:      '#4d6357',        // darker (was #6b7c72)
 };
 
 var CSS = [
@@ -47,32 +47,32 @@ var CSS = [
   "@keyframes floatC{0%,100%{transform:translate(0,0)}50%{transform:translate(8px,-14px)}}",
   "@keyframes spinSlow{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}",
   "@keyframes pulseRing{0%,100%{transform:scale(1);opacity:0.45}50%{transform:scale(1.08);opacity:0.2}}",
-  ".cc2-dots{background-image:radial-gradient(circle,rgba(14,101,45,0.11) 1.5px,transparent 1.5px);background-size:24px 24px;}",
-  ".cc2-dots-blue{background-image:radial-gradient(circle,rgba(31,91,135,0.09) 1.5px,transparent 1.5px);background-size:20px 20px;}",
+  ".cc2-dots{background-image:radial-gradient(circle,rgba(10,79,34,0.15) 1.5px,transparent 1.5px);background-size:24px 24px;}",
+  ".cc2-dots-blue{background-image:radial-gradient(circle,rgba(23,74,114,0.12) 1.5px,transparent 1.5px);background-size:20px 20px;}",
   ".cc2-wave{line-height:0;overflow:hidden;}",
   ".cc2-wave svg{display:block;width:100%;}",
-  ".cc2-btn-wa{display:inline-flex;align-items:center;gap:8px;background:#22c55e;color:#fff;border:none;border-radius:50px;padding:14px 32px;font-size:0.95rem;font-weight:600;font-family:'DM Sans',sans-serif;cursor:pointer;text-decoration:none;transition:all 0.3s;}",
-  ".cc2-btn-wa:hover{background:#16a34a;transform:translateY(-3px);box-shadow:0 12px 28px rgba(34,197,94,0.28);}",
-  ".cc2-btn-outline{display:inline-flex;align-items:center;gap:8px;background:transparent;color:#0e652d;border:2px solid #0e652d;border-radius:50px;padding:12px 28px;font-size:0.95rem;font-weight:600;font-family:'DM Sans',sans-serif;cursor:pointer;text-decoration:none;transition:all 0.3s;}",
-  ".cc2-btn-outline:hover{background:#0e652d;color:#fff;transform:translateY(-3px);}",
-  ".cc2-btn-green{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#0e652d;color:#fff;border:none;border-radius:50px;padding:15px 38px;font-size:1rem;font-weight:700;font-family:'DM Sans',sans-serif;cursor:pointer;text-decoration:none;min-width:260px;transition:all 0.3s;}",
-  ".cc2-btn-green:hover{background:#1f5b87;transform:translateY(-3px);box-shadow:0 14px 32px rgba(14,101,45,0.26);}",
-  ".cc2-btn-outline-green{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:transparent;color:#0e652d;border:2px solid #0e652d;border-radius:50px;padding:13px 34px;font-size:1rem;font-weight:700;font-family:'DM Sans',sans-serif;cursor:pointer;text-decoration:none;min-width:260px;transition:all 0.3s;}",
-  ".cc2-btn-outline-green:hover{background:#0e652d;color:#fff;transform:translateY(-3px);}",
+  ".cc2-btn-wa{display:inline-flex;align-items:center;gap:8px;background:#16a34a;color:#fff;border:none;border-radius:50px;padding:14px 32px;font-size:0.95rem;font-weight:600;font-family:'DM Sans',sans-serif;cursor:pointer;text-decoration:none;transition:all 0.3s;}",
+  ".cc2-btn-wa:hover{background:#15803d;transform:translateY(-3px);box-shadow:0 12px 28px rgba(22,163,74,0.32);}",
+  ".cc2-btn-outline{display:inline-flex;align-items:center;gap:8px;background:transparent;color:#0a4f22;border:2px solid #0a4f22;border-radius:50px;padding:12px 28px;font-size:0.95rem;font-weight:600;font-family:'DM Sans',sans-serif;cursor:pointer;text-decoration:none;transition:all 0.3s;}",
+  ".cc2-btn-outline:hover{background:#0a4f22;color:#fff;transform:translateY(-3px);}",
+  ".cc2-btn-green{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#0a4f22;color:#fff;border:none;border-radius:50px;padding:15px 38px;font-size:1rem;font-weight:700;font-family:'DM Sans',sans-serif;cursor:pointer;text-decoration:none;min-width:260px;transition:all 0.3s;}",
+  ".cc2-btn-green:hover{background:#174a72;transform:translateY(-3px);box-shadow:0 14px 32px rgba(10,79,34,0.30);}",
+  ".cc2-btn-outline-green{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:transparent;color:#0a4f22;border:2px solid #0a4f22;border-radius:50px;padding:13px 34px;font-size:1rem;font-weight:700;font-family:'DM Sans',sans-serif;cursor:pointer;text-decoration:none;min-width:260px;transition:all 0.3s;}",
+  ".cc2-btn-outline-green:hover{background:#0a4f22;color:#fff;transform:translateY(-3px);}",
   ".cc2-who-card{transition:transform 0.32s cubic-bezier(0.34,1.56,0.64,1),box-shadow 0.3s;}",
-  ".cc2-who-card:hover{transform:translateY(-7px) rotate(-0.3deg);box-shadow:0 20px 40px rgba(14,101,45,0.12) !important;}",
-  ".cc2-who-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:#0e652d;transform:scaleX(0);transform-origin:left;transition:transform 0.3s ease;}",
+  ".cc2-who-card:hover{transform:translateY(-7px) rotate(-0.3deg);box-shadow:0 20px 40px rgba(10,79,34,0.16) !important;}",
+  ".cc2-who-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:#0a4f22;transform:scaleX(0);transform-origin:left;transition:transform 0.3s ease;}",
   ".cc2-who-card:hover::before{transform:scaleX(1);}",
   ".cc2-offer-card{transition:transform 0.32s cubic-bezier(0.34,1.56,0.64,1),box-shadow 0.3s,border-color 0.3s;}",
-  ".cc2-offer-card:hover{transform:translateY(-7px);box-shadow:0 20px 40px rgba(14,101,45,0.1) !important;}",
+  ".cc2-offer-card:hover{transform:translateY(-7px);box-shadow:0 20px 40px rgba(10,79,34,0.14) !important;}",
   ".cc2-offer-card:hover .cc2-offer-icon{transform:scale(1.15) rotate(-6deg);}",
   ".cc2-offer-icon{transition:transform 0.38s cubic-bezier(0.34,1.56,0.64,1);display:inline-flex;}",
   ".cc2-step-icon{transition:background 0.35s cubic-bezier(0.34,1.56,0.64,1),color 0.3s,transform 0.35s cubic-bezier(0.34,1.56,0.64,1) !important;}",
-  ".cc2-step-card:hover .cc2-step-icon{background:#0e652d !important;color:#fff !important;transform:rotate(-8deg) scale(1.1) !important;}",
+  ".cc2-step-card:hover .cc2-step-icon{background:#0a4f22 !important;color:#fff !important;transform:rotate(-8deg) scale(1.1) !important;}",
   ".cc2-benefit{transition:background 0.25s,transform 0.25s;}",
-  ".cc2-benefit:hover{background:#e6f4eb !important;transform:translateX(5px);}",
-  ".cc2-faq-item{border:1px solid #e0d8cc;border-radius:12px;margin-bottom:12px;overflow:hidden;transition:border-color 0.3s,box-shadow 0.3s;cursor:pointer;}",
-  ".cc2-faq-item:hover,.cc2-faq-item.cc2-open{border-color:#0e652d;box-shadow:0 4px 18px rgba(14,101,45,0.1);}",
+  ".cc2-benefit:hover{background:#c8e8d2 !important;transform:translateX(5px);}",
+  ".cc2-faq-item{border:1px solid #ccc4b4;border-radius:12px;margin-bottom:12px;overflow:hidden;transition:border-color 0.3s,box-shadow 0.3s;cursor:pointer;}",
+  ".cc2-faq-item:hover,.cc2-faq-item.cc2-open{border-color:#0a4f22;box-shadow:0 4px 18px rgba(10,79,34,0.14);}",
   ".cc2-faq-body{max-height:0;overflow:hidden;transition:max-height 0.38s ease;}",
   ".cc2-faq-body.cc2-open{max-height:220px;}",
   ".cc2-tag{transition:all 0.25s;}",
@@ -194,26 +194,26 @@ export default function CareerCounselling() {
       <Box className="cc2-page" sx={{ bgcolor:T.snow, pt:8, overflowX:'hidden' }}>
 
         {/* ══ HERO ══════════════════════════════════════════════════════════ */}
-        <Box sx={{ position:'relative', overflow:'hidden', background:'linear-gradient(145deg,#f0faf3 0%,#e8f4ff 55%,#fdf8f0 100%)', py:{ xs:10, md:14 } }}>
-          <Box sx={{ position:'absolute', top:50, left:'5%', width:130, height:130, borderRadius:'40% 60% 55% 45%', bgcolor:T.greenMid, opacity:0.4, animation:'floatA 8s ease-in-out infinite', pointerEvents:'none' }} />
-          <Box sx={{ position:'absolute', top:'20%', right:'7%', width:100, height:100, borderRadius:'55% 45% 40% 60%', bgcolor:T.blueMid, opacity:0.38, animation:'floatB 10s ease-in-out infinite', pointerEvents:'none' }} />
-          <Box sx={{ position:'absolute', bottom:'16%', left:'14%', width:65, height:65, borderRadius:'50%', bgcolor:'#fde8b8', opacity:0.65, animation:'floatC 7s ease-in-out infinite', pointerEvents:'none' }} />
-          <Box sx={{ position:'absolute', bottom:'12%', right:'16%', width:85, height:85, borderRadius:'45% 55% 60% 40%', bgcolor:T.greenMid, opacity:0.32, animation:'floatA 9s ease-in-out infinite 2s', pointerEvents:'none' }} />
-          <Box sx={{ position:'absolute', top:'6%', right:'20%', width:160, height:160, borderRadius:'50%', border:'2px dashed rgba(14,101,45,0.16)', animation:'spinSlow 20s linear infinite', pointerEvents:'none' }} />
-          <Box sx={{ position:'absolute', bottom:'10%', left:'18%', width:110, height:110, borderRadius:'50%', border:'2px dashed rgba(31,91,135,0.14)', animation:'spinSlow 26s linear infinite reverse', pointerEvents:'none' }} />
+        <Box sx={{ position:'relative', overflow:'hidden', background:'linear-gradient(145deg,#d4edda 0%,#c8dff0 55%,#ece5d6 100%)', py:{ xs:10, md:14 } }}>
+          <Box sx={{ position:'absolute', top:50, left:'5%', width:130, height:130, borderRadius:'40% 60% 55% 45%', bgcolor:T.greenMid, opacity:0.48, animation:'floatA 8s ease-in-out infinite', pointerEvents:'none' }} />
+          <Box sx={{ position:'absolute', top:'20%', right:'7%', width:100, height:100, borderRadius:'55% 45% 40% 60%', bgcolor:T.blueMid, opacity:0.44, animation:'floatB 10s ease-in-out infinite', pointerEvents:'none' }} />
+          <Box sx={{ position:'absolute', bottom:'16%', left:'14%', width:65, height:65, borderRadius:'50%', bgcolor:'#e8c87a', opacity:0.68, animation:'floatC 7s ease-in-out infinite', pointerEvents:'none' }} />
+          <Box sx={{ position:'absolute', bottom:'12%', right:'16%', width:85, height:85, borderRadius:'45% 55% 60% 40%', bgcolor:T.greenMid, opacity:0.38, animation:'floatA 9s ease-in-out infinite 2s', pointerEvents:'none' }} />
+          <Box sx={{ position:'absolute', top:'6%', right:'20%', width:160, height:160, borderRadius:'50%', border:'2px dashed rgba(10,79,34,0.20)', animation:'spinSlow 20s linear infinite', pointerEvents:'none' }} />
+          <Box sx={{ position:'absolute', bottom:'10%', left:'18%', width:110, height:110, borderRadius:'50%', border:'2px dashed rgba(23,74,114,0.18)', animation:'spinSlow 26s linear infinite reverse', pointerEvents:'none' }} />
           <Box className="cc2-dots" sx={{ position:'absolute', inset:0, opacity:0.55, pointerEvents:'none' }} />
 
           <Container maxWidth="lg">
             <Box sx={{ textAlign:'center', position:'relative', zIndex:1 }}>
 
-              <Box className="cc2-hero-anim" sx={{ display:'inline-flex', alignItems:'center', gap:1, opacity:0, bgcolor:T.white, border:'1.5px solid '+T.greenMid, color:T.green, px:2.5, py:1, borderRadius:99, mb:4, fontSize:'0.78rem', fontWeight:700, letterSpacing:'1.8px', textTransform:'uppercase', boxShadow:'0 4px 12px rgba(14,101,45,0.1)' }}>
+              <Box className="cc2-hero-anim" sx={{ display:'inline-flex', alignItems:'center', gap:1, opacity:0, bgcolor:T.white, border:'1.5px solid '+T.greenMid, color:T.green, px:2.5, py:1, borderRadius:99, mb:4, fontSize:'0.78rem', fontWeight:700, letterSpacing:'1.8px', textTransform:'uppercase', boxShadow:'0 4px 12px rgba(10,79,34,0.14)' }}>
                 <span style={{ fontSize:'1rem' }}>🎯</span>
                 Expert Career Guidance
               </Box>
 
               <Typography className="cc2-hero-anim" variant="h1" sx={{ fontFamily:"'Playfair Display',Georgia,serif", color:T.ink, fontSize:{ xs:'2.8rem', md:'4.6rem' }, fontWeight:700, lineHeight:1.08, mb:2, opacity:0, letterSpacing:'-0.025em' }}>
                 Why Career{' '}
-                <Box component="span" sx={{ background:'linear-gradient(135deg,#0e652d 0%,#1f5b87 100%)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', backgroundClip:'text' }}>
+                <Box component="span" sx={{ background:'linear-gradient(135deg,#0a4f22 0%,#174a72 100%)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent', backgroundClip:'text' }}>
                   Counselling
                 </Box>
               </Typography>
@@ -234,8 +234,8 @@ export default function CareerCounselling() {
               </Box>
 
               <Box className="cc2-hero-anim" sx={{ display:'flex', justifyContent:'center', gap:2, flexWrap:'wrap', opacity:0 }}>
-                <a className="cc2-btn-wa" href="https://wa.me/916351113766?text=Hello%2C%20I%20would%20like%20to%20book%20a%20career%20counselling%20session.%20Please%20share%20available%20slots%2C%20fees%2C%20and%20further%20details." 
-                  target="_blank" 
+                <a className="cc2-btn-wa" href="https://wa.me/916351113766?text=Hello%2C%20I%20would%20like%20to%20book%20a%20career%20counselling%20session.%20Please%20share%20available%20slots%2C%20fees%2C%20and%20further%20details."
+                  target="_blank"
                   rel="noreferrer">
                   <WhatsAppIcon sx={{ fontSize:20 }} />
                   Book via WhatsApp
@@ -251,14 +251,49 @@ export default function CareerCounselling() {
         </Box>
 
         {/* ══ WAVE 1 ════════════════════════════════════════════════════════ */}
-        <Box className="cc2-wave" sx={{ mt:'-1px' }}>
-          <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-            <path d="M0,0 C240,55 480,5 720,30 C960,55 1200,5 1440,30 L1440,60 L0,60 Z" fill="#ffffff" />
-          </svg>
-        </Box>
+        <Box 
+  className="cc2-wave" 
+  sx={{ 
+    mt: '-2px',           // pull up more aggressively
+    mb: '-2px',           // pull down to remove gap below
+    lineHeight: 0,
+    position: 'relative',
+    zIndex: 2,
+  }}
+>
+  <svg 
+    viewBox="0 0 1440 60"   // reduced height = less white area
+    xmlns="http://www.w3.org/2000/svg" 
+    preserveAspectRatio="none"
+    style={{ display: 'block', width: '100%', height: 'auto' }}
+  >
+    <defs>
+      <linearGradient id="split1" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stopColor="#c8e8d2" stopOpacity="0.8" />
+        <stop offset="100%" stopColor="#f0f7f2" stopOpacity="1" />
+      </linearGradient>
+      <linearGradient id="split2" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stopColor="#90b8d8" stopOpacity="0.4" />
+        <stop offset="100%" stopColor="#f0f7f2" stopOpacity="1" />
+      </linearGradient>
+    </defs>
+
+    {/* Lower wave (solid background for next section) */}
+    <path d="M0,35 Q400,20 800,40 T1440,30 L1440,60 L0,60 Z" fill="#f0f7f2" />
+
+    {/* Middle wave */}
+    <path d="M0,25 C350,45 650,5 1000,25 C1200,38 1320,22 1440,22 L1440,60 L0,60 Z" fill="url(#split1)" />
+
+    {/* Upper accent wave */}
+    <path d="M0,15 Q350,0 750,22 T1440,12 L1440,60 L0,60 Z" fill="url(#split2)" />
+
+    {/* Optional subtle separator line (moved down so it doesn't create gap) */}
+    <path d="M0,32 L1440,32" stroke="#0a4f22" strokeWidth="1" opacity="0.1" strokeDasharray="10 8" />
+  </svg>
+</Box>
 
         {/* ══ WHO IS THIS FOR ═══════════════════════════════════════════════ */}
-        <Box sx={{ py:{ xs:8, md:12 }, bgcolor:T.white }}>
+        <Box sx={{ py:{ xs:8, md:12 }, bgcolor:'#f0f7f2' }}>
           <Container maxWidth="lg">
             <Box className="cc2-section-head" sx={{ textAlign:'center', mb:7, opacity:0 }}>
               <SectionLabel bg={T.blueLt} col={T.blue} border={T.blueMid}>Is This For You?</SectionLabel>
@@ -271,8 +306,8 @@ export default function CareerCounselling() {
                 {WHO_DATA.map(function(item, i) {
                   return (
                     <Grid item xs={12} sm={6} md={3} key={i}>
-                      <Box className="cc2-who-card" sx={{ opacity:0, height:'100%', p:3.5, bgcolor:item.bg, border:'1.5px solid '+item.border, borderRadius:3, position:'relative', overflow:'hidden', boxShadow:'0 3px 14px rgba(14,101,45,0.05)' }}>
-                        <Box sx={{ position:'absolute', bottom:-16, right:-16, width:64, height:64, borderRadius:'50%', border:'2px solid '+item.col, opacity:0.1, animation:'pulseRing 3.5s ease-in-out infinite' }} />
+                      <Box className="cc2-who-card" sx={{ opacity:0, height:'100%', p:3.5, bgcolor:item.bg, border:'1.5px solid '+item.border, borderRadius:3, position:'relative', overflow:'hidden', boxShadow:'0 3px 14px rgba(10,79,34,0.08)' }}>
+                        <Box sx={{ position:'absolute', bottom:-16, right:-16, width:64, height:64, borderRadius:'50%', border:'2px solid '+item.col, opacity:0.14, animation:'pulseRing 3.5s ease-in-out infinite' }} />
                         <Box sx={{ display:'inline-flex', bgcolor:T.white, border:'1px solid '+item.border, px:1.5, py:0.5, borderRadius:99, mb:2 }}>
                           <Typography sx={{ fontSize:'0.7rem', color:item.col, fontWeight:700, letterSpacing:1 }}>{item.tag}</Typography>
                         </Box>
@@ -292,12 +327,12 @@ export default function CareerCounselling() {
         {/* ══ WAVE 2 ════════════════════════════════════════════════════════ */}
         <Box className="cc2-wave">
           <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-            <path d="M0,30 C360,0 720,60 1080,30 C1260,15 1380,10 1440,0 L1440,60 L0,60 Z" fill="#f0faf3" />
+            <path d="M0,30 C360,0 720,60 1080,30 C1260,15 1380,10 1440,0 L1440,60 L0,60 Z" fill="#daeee2" />
           </svg>
         </Box>
 
         {/* ══ WHAT WE OFFER ═════════════════════════════════════════════════ */}
-        <Box sx={{ py:{ xs:8, md:12 }, background:'linear-gradient(135deg,#f0faf3 0%,#eaf4ff 100%)' }}>
+        <Box sx={{ py:{ xs:8, md:12 }, background:'linear-gradient(135deg,#daeee2 0%,#cce0f0 100%)' }}>
           <Container maxWidth="lg">
             <Box className="cc2-section-head" sx={{ textAlign:'center', mb:7, opacity:0 }}>
               <SectionLabel bg={T.greenLt} col={T.green} border={T.greenMid}>Our Services</SectionLabel>
@@ -310,9 +345,9 @@ export default function CareerCounselling() {
                 var IconComp = item.Icon;
                 return (
                   <Grid item xs={12} sm={6} md={4} key={i}>
-                    <Box className="cc2-offer-card" sx={{ opacity:0, p:3.5, height:'100%', bgcolor:T.white, border:'1.5px solid '+item.border, borderRadius:4, textAlign:'center', boxShadow:'0 3px 14px rgba(14,101,45,0.05)', position:'relative', overflow:'hidden' }}>
+                    <Box className="cc2-offer-card" sx={{ opacity:0, p:3.5, height:'100%', bgcolor:T.white, border:'1.5px solid '+item.border, borderRadius:4, textAlign:'center', boxShadow:'0 3px 14px rgba(10,79,34,0.08)', position:'relative', overflow:'hidden' }}>
                       <Box sx={{ position:'absolute', top:0, left:0, right:0, height:4, background:'linear-gradient(90deg,'+item.col+','+(item.col===T.amber?T.green:T.blue)+')' }} />
-                      <Box sx={{ position:'absolute', bottom:-16, right:-16, width:60, height:60, borderRadius:'50%', border:'2px solid '+item.col, opacity:0.08, animation:'pulseRing 4s ease-in-out infinite' }} />
+                      <Box sx={{ position:'absolute', bottom:-16, right:-16, width:60, height:60, borderRadius:'50%', border:'2px solid '+item.col, opacity:0.11, animation:'pulseRing 4s ease-in-out infinite' }} />
                       <Box sx={{ display:'flex', justifyContent:'center', mb:2, mt:1 }}>
                         <Box sx={{ bgcolor:item.iconBg, p:1.8, borderRadius:2, display:'inline-flex' }}>
                           <IconComp className="cc2-offer-icon" sx={{ fontSize:34, color:item.col }} />
@@ -332,12 +367,12 @@ export default function CareerCounselling() {
         {/* ══ WAVE 3 ════════════════════════════════════════════════════════ */}
         <Box className="cc2-wave">
           <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-            <path d="M0,0 C480,60 960,0 1440,40 L1440,60 L0,60 Z" fill="#ffffff" />
+            <path d="M0,0 C480,60 960,0 1440,40 L1440,60 L0,60 Z" fill="#f0f7f2" />
           </svg>
         </Box>
 
         {/* ══ OUR APPROACH ══════════════════════════════════════════════════ */}
-        <Box sx={{ py:{ xs:8, md:12 }, bgcolor:T.white }}>
+        <Box sx={{ py:{ xs:8, md:12 }, bgcolor:'#f0f7f2' }}>
           <Container maxWidth="lg">
             <Box className="cc2-section-head" sx={{ textAlign:'center', mb:7, opacity:0 }}>
               <SectionLabel bg={T.amberLt} col={T.amber} border={T.amberMid}>Our Philosophy</SectionLabel>
@@ -348,8 +383,8 @@ export default function CareerCounselling() {
             <Box className="cc2-approach-wrap">
               <Grid container spacing={5} alignItems="center">
                 <Grid item xs={12} md={5}>
-                  <Box className="cc2-approach-l" sx={{ opacity:0, p:{ xs:3.5, md:5 }, borderRadius:4, bgcolor:T.parchment, borderLeft:'6px solid '+T.green, position:'relative', overflow:'hidden', boxShadow:'0 8px 28px rgba(14,101,45,0.08)' }}>
-                    <Box sx={{ position:'absolute', top:6, right:18, fontFamily:'Georgia,serif', fontSize:'7rem', color:T.green, opacity:0.07, lineHeight:1, userSelect:'none' }}>&ldquo;</Box>
+                  <Box className="cc2-approach-l" sx={{ opacity:0, p:{ xs:3.5, md:5 }, borderRadius:4, bgcolor:T.parchment, borderLeft:'6px solid '+T.green, position:'relative', overflow:'hidden', boxShadow:'0 8px 28px rgba(10,79,34,0.10)' }}>
+                    <Box sx={{ position:'absolute', top:6, right:18, fontFamily:'Georgia,serif', fontSize:'7rem', color:T.green, opacity:0.08, lineHeight:1, userSelect:'none' }}>&ldquo;</Box>
                     <Typography sx={{ fontFamily:"'Playfair Display',serif", fontSize:{ xs:'1.4rem', md:'1.7rem' }, fontStyle:'italic', color:T.ink, lineHeight:1.55, mb:3 }}>
                       The right career begins with knowing yourself, not just your marks.
                     </Typography>
@@ -385,12 +420,12 @@ export default function CareerCounselling() {
         {/* ══ WAVE 4 ════════════════════════════════════════════════════════ */}
         <Box className="cc2-wave">
           <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-            <path d="M0,20 C300,60 700,0 1100,40 C1280,55 1380,45 1440,30 L1440,60 L0,60 Z" fill="#eaf5ee" />
+            <path d="M0,20 C300,60 700,0 1100,40 C1280,55 1380,45 1440,30 L1440,60 L0,60 Z" fill="#d4e9dd" />
           </svg>
         </Box>
 
         {/* ══ HOW IT WORKS ══════════════════════════════════════════════════ */}
-        <Box sx={{ py:{ xs:8, md:12 }, background:'linear-gradient(135deg,#eaf5ee 0%,#e4eef6 100%)' }}>
+        <Box sx={{ py:{ xs:8, md:12 }, background:'linear-gradient(135deg,#d4e9dd 0%,#ccdce8 100%)' }}>
           <Container maxWidth="lg">
             <Box className="cc2-section-head" sx={{ textAlign:'center', mb:7, opacity:0 }}>
               <SectionLabel bg={T.greenLt} col={T.green} border={T.greenMid}>Our Process</SectionLabel>
@@ -406,7 +441,7 @@ export default function CareerCounselling() {
                   return (
                     <Grid item xs={12} sm={6} md={3} key={i}>
                       <Box className="cc2-step-card" sx={{ opacity:0, textAlign:'center', px:2 }}>
-                        <Box className="cc2-step-icon" sx={{ width:76, height:76, borderRadius:'50%', bgcolor:T.white, border:'2px solid '+step.border, boxShadow:'0 4px 16px rgba(14,101,45,0.1)', mx:'auto', mb:1.5, display:'flex', alignItems:'center', justifyContent:'center', color:step.col }}>
+                        <Box className="cc2-step-icon" sx={{ width:76, height:76, borderRadius:'50%', bgcolor:T.white, border:'2px solid '+step.border, boxShadow:'0 4px 16px rgba(10,79,34,0.12)', mx:'auto', mb:1.5, display:'flex', alignItems:'center', justifyContent:'center', color:step.col }}>
                           <Icon sx={{ fontSize:30 }} />
                         </Box>
                         <Box sx={{ display:'inline-block', bgcolor:step.bg, color:step.col, border:'1.5px solid '+step.border, px:1.8, py:0.35, borderRadius:99, fontSize:'0.7rem', fontWeight:800, letterSpacing:1, mb:1.5 }}>
@@ -426,12 +461,12 @@ export default function CareerCounselling() {
         {/* ══ WAVE 5 ════════════════════════════════════════════════════════ */}
         <Box className="cc2-wave">
           <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-            <path d="M0,0 C240,55 600,5 960,35 C1200,55 1380,20 1440,10 L1440,60 L0,60 Z" fill="#ffffff" />
+            <path d="M0,0 C240,55 600,5 960,35 C1200,55 1380,20 1440,10 L1440,60 L0,60 Z" fill="#f0f7f2" />
           </svg>
         </Box>
 
         {/* ══ EVERYTHING YOU GET ════════════════════════════════════════════ */}
-        <Box sx={{ py:{ xs:8, md:12 }, bgcolor:T.white }}>
+        <Box sx={{ py:{ xs:8, md:12 }, bgcolor:'#f0f7f2' }}>
           <Container maxWidth="md">
             <Box className="cc2-section-head" sx={{ textAlign:'center', mb:7, opacity:0 }}>
               <SectionLabel bg={T.blueLt} col={T.blue} border={T.blueMid}>What You Receive</SectionLabel>
@@ -457,7 +492,7 @@ export default function CareerCounselling() {
         {/* ══ WAVE 6 ════════════════════════════════════════════════════════ */}
         <Box className="cc2-wave">
           <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-            <path d="M0,30 C400,5 800,55 1200,25 C1340,10 1400,15 1440,20 L1440,60 L0,60 Z" fill="#f5f0e8" />
+            <path d="M0,30 C400,5 800,55 1200,25 C1340,10 1400,15 1440,20 L1440,60 L0,60 Z" fill="#ece5d6" />
           </svg>
         </Box>
 
@@ -477,19 +512,19 @@ export default function CareerCounselling() {
         {/* ══ WAVE 7 ════════════════════════════════════════════════════════ */}
         <Box className="cc2-wave">
           <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-            <path d="M0,10 C300,55 700,5 1050,35 C1250,55 1380,30 1440,20 L1440,60 L0,60 Z" fill="#eaf5ee" />
+            <path d="M0,10 C300,55 700,5 1050,35 C1250,55 1380,30 1440,20 L1440,60 L0,60 Z" fill="#d4e9dd" />
           </svg>
         </Box>
 
         {/* ══ BOTTOM CTA ════════════════════════════════════════════════════ */}
-        <Box sx={{ py:{ xs:10, md:14 }, background:'linear-gradient(145deg,#eaf5ee 0%,#e4eef6 50%,#fdf8f0 100%)', position:'relative', overflow:'hidden', textAlign:'center' }}>
-          <Box sx={{ position:'absolute', top:'10%', left:'4%', width:100, height:100, borderRadius:'50%', bgcolor:T.greenMid, opacity:0.28, animation:'floatA 10s ease-in-out infinite', pointerEvents:'none' }} />
-          <Box sx={{ position:'absolute', bottom:'14%', right:'5%', width:80, height:80, borderRadius:'55% 45% 40% 60%', bgcolor:T.blueMid, opacity:0.28, animation:'floatB 8s ease-in-out infinite', pointerEvents:'none' }} />
+        <Box sx={{ py:{ xs:10, md:14 }, background:'linear-gradient(145deg,#d4e9dd 0%,#ccdce8 50%,#ece5d6 100%)', position:'relative', overflow:'hidden', textAlign:'center' }}>
+          <Box sx={{ position:'absolute', top:'10%', left:'4%', width:100, height:100, borderRadius:'50%', bgcolor:T.greenMid, opacity:0.36, animation:'floatA 10s ease-in-out infinite', pointerEvents:'none' }} />
+          <Box sx={{ position:'absolute', bottom:'14%', right:'5%', width:80, height:80, borderRadius:'55% 45% 40% 60%', bgcolor:T.blueMid, opacity:0.34, animation:'floatB 8s ease-in-out infinite', pointerEvents:'none' }} />
           <Box className="cc2-dots-blue" sx={{ position:'absolute', inset:0, opacity:0.45, pointerEvents:'none' }} />
 
           <Container maxWidth="sm" sx={{ position:'relative', zIndex:1 }}>
             <Box className="cc2-cta-inner" sx={{ opacity:0 }}>
-              <Box sx={{ display:'inline-flex', alignItems:'center', gap:1, bgcolor:T.white, color:T.green, px:2.5, py:1, borderRadius:99, fontSize:'0.78rem', fontWeight:700, letterSpacing:'2px', textTransform:'uppercase', mb:3, boxShadow:'0 4px 14px rgba(14,101,45,0.1)', border:'1.5px solid '+T.greenMid }}>
+              <Box sx={{ display:'inline-flex', alignItems:'center', gap:1, bgcolor:T.white, color:T.green, px:2.5, py:1, borderRadius:99, fontSize:'0.78rem', fontWeight:700, letterSpacing:'2px', textTransform:'uppercase', mb:3, boxShadow:'0 4px 14px rgba(10,79,34,0.14)', border:'1.5px solid '+T.greenMid }}>
                 Ready to Start?
               </Box>
               <Typography sx={{ fontFamily:"'Playfair Display',serif", color:T.ink, fontSize:{ xs:'1.9rem', md:'2.8rem' }, fontWeight:700, mb:2, lineHeight:1.2 }}>
