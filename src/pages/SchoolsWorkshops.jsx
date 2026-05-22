@@ -17,21 +17,21 @@ gsap.registerPlugin(ScrollTrigger);
 
 /* ─── TOKENS ─────────────────────────────────────────────────────────────── */
 var T = {
-  green:     '#0e652d',
-  greenLt:   '#e6f4eb',
-  greenMid:  '#c8e8d2',
-  blue:      '#1f5b87',
-  blueLt:    '#e4eef6',
-  blueMid:   '#c2d9ee',
-  amber:     '#d4891a',
-  amberLt:   '#fdf0d8',
+  green:     '#0a4f22',        // darker (was #0e652d)
+  greenLt:   '#c8e8d2',        // darker (was #e6f4eb)
+  greenMid:  '#96cead',        // darker (was #c8e8d2)
+  blue:      '#174a72',        // darker (was #1f5b87)
+  blueLt:    '#c4d9ec',        // darker (was #e4eef6)
+  blueMid:   '#90b8d8',        // darker (was #c2d9ee)
+  amber:     '#b06e10',        // darker (was #d4891a)
+  amberLt:   '#f5d9a0',        // darker (was #fdf0d8)
   white:     '#ffffff',
-  snow:      '#fafdf7',
-  cream:     '#fdf8f0',
-  parchment: '#f5f0e8',
-  ink:       '#1a2a1a',
-  slate:     '#3d5a4a',
-  ash:       '#6b7c72',
+  snow:      '#eef6f0',        // darker (was #fafdf7)
+  cream:     '#f5ede0',        // darker (was #fdf8f0)
+  parchment: '#ece5d6',        // darker (was #f5f0e8)
+  ink:       '#111d11',        // darker (was #1a2a1a)
+  slate:     '#2d4a38',        // darker (was #3d5a4a)
+  ash:       '#4d6357',        // darker (was #6b7c72)
 };
 
 /* ─── GLOBAL CSS ─────────────────────────────────────────────────────────── */
@@ -39,8 +39,6 @@ var CSS = [
   "@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=DM+Sans:wght@300;400;500;600;700&display=swap');",
   "*, *::before, *::after { box-sizing: border-box; }",
   ".sw-page { font-family: 'DM Sans', sans-serif; }",
-
-  /* floating blob keyframes */
   "@keyframes floatA { 0%,100%{transform:translate(0,0) rotate(0deg)} 33%{transform:translate(12px,-18px) rotate(3deg)} 66%{transform:translate(-8px,10px) rotate(-2deg)} }",
   "@keyframes floatB { 0%,100%{transform:translate(0,0) rotate(0deg)} 33%{transform:translate(-14px,10px) rotate(-4deg)} 66%{transform:translate(10px,-12px) rotate(2deg)} }",
   "@keyframes floatC { 0%,100%{transform:translate(0,0)} 50%{transform:translate(8px,-14px)} }",
@@ -54,18 +52,18 @@ var CSS = [
   "@keyframes fadeUp { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }",
 
   /* buttons */
-  ".sw-btn-blue { display:inline-flex;align-items:center;gap:8px;background:#1f5b87;color:#fff;border:none;border-radius:50px;padding:14px 32px;font-size:0.95rem;font-weight:600;font-family:'DM Sans',sans-serif;cursor:pointer;text-decoration:none;transition:all 0.3s; }",
-  ".sw-btn-blue:hover { background:#0e652d;transform:translateY(-3px);box-shadow:0 12px 28px rgba(31,91,135,0.28); }",
-  ".sw-btn-wa { display:inline-flex;align-items:center;gap:8px;background:#e6f4eb;color:#0e652d;border:2px solid #c8e8d2;border-radius:50px;padding:12px 28px;font-size:0.95rem;font-weight:600;font-family:'DM Sans',sans-serif;cursor:pointer;text-decoration:none;transition:all 0.3s; }",
-  ".sw-btn-wa:hover { background:#0e652d;color:#fff;border-color:#0e652d;transform:translateY(-3px);box-shadow:0 12px 28px rgba(14,101,45,0.22); }",
-  ".sw-btn-green-pill { display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#0e652d;color:#fff;border:none;border-radius:50px;padding:16px 40px;font-size:1rem;font-weight:700;font-family:'DM Sans',sans-serif;cursor:pointer;text-decoration:none;transition:all 0.3s;min-width:260px; }",
-  ".sw-btn-green-pill:hover { background:#1f5b87;transform:translateY(-3px);box-shadow:0 14px 32px rgba(14,101,45,0.28); }",
-  ".sw-btn-outline-green { display:inline-flex;align-items:center;justify-content:center;gap:8px;background:transparent;color:#0e652d;border:2px solid #0e652d;border-radius:50px;padding:14px 36px;font-size:1rem;font-weight:700;font-family:'DM Sans',sans-serif;cursor:pointer;text-decoration:none;transition:all 0.3s;min-width:260px; }",
-  ".sw-btn-outline-green:hover { background:#0e652d;color:#fff;transform:translateY(-3px); }",
+  ".sw-btn-blue { display:inline-flex;align-items:center;gap:8px;background:#174a72;color:#fff;border:none;border-radius:50px;padding:14px 32px;font-size:0.95rem;font-weight:600;font-family:'DM Sans',sans-serif;cursor:pointer;text-decoration:none;transition:all 0.3s; }",
+  ".sw-btn-blue:hover { background:#0a4f22;transform:translateY(-3px);box-shadow:0 12px 28px rgba(23,74,114,0.30); }",
+  ".sw-btn-wa { display:inline-flex;align-items:center;gap:8px;background:#c8e8d2;color:#0a4f22;border:2px solid #96cead;border-radius:50px;padding:12px 28px;font-size:0.95rem;font-weight:600;font-family:'DM Sans',sans-serif;cursor:pointer;text-decoration:none;transition:all 0.3s; }",
+  ".sw-btn-wa:hover { background:#0a4f22;color:#fff;border-color:#0a4f22;transform:translateY(-3px);box-shadow:0 12px 28px rgba(10,79,34,0.26); }",
+  ".sw-btn-green-pill { display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#0a4f22;color:#fff;border:none;border-radius:50px;padding:16px 40px;font-size:1rem;font-weight:700;font-family:'DM Sans',sans-serif;cursor:pointer;text-decoration:none;transition:all 0.3s;min-width:260px; }",
+  ".sw-btn-green-pill:hover { background:#174a72;transform:translateY(-3px);box-shadow:0 14px 32px rgba(10,79,34,0.30); }",
+  ".sw-btn-outline-green { display:inline-flex;align-items:center;justify-content:center;gap:8px;background:transparent;color:#0a4f22;border:2px solid #0a4f22;border-radius:50px;padding:14px 36px;font-size:1rem;font-weight:700;font-family:'DM Sans',sans-serif;cursor:pointer;text-decoration:none;transition:all 0.3s;min-width:260px; }",
+  ".sw-btn-outline-green:hover { background:#0a4f22;color:#fff;transform:translateY(-3px); }",
 
   /* workshop cards */
   ".sw-wcard { transition:transform 0.35s cubic-bezier(0.34,1.56,0.64,1),box-shadow 0.3s; }",
-  ".sw-wcard:hover { transform:translateY(-8px) rotate(-0.4deg);box-shadow:0 24px 48px rgba(14,101,45,0.13) !important; }",
+  ".sw-wcard:hover { transform:translateY(-8px) rotate(-0.4deg);box-shadow:0 24px 48px rgba(10,79,34,0.16) !important; }",
   ".sw-wcard:hover .sw-wcard-icon { transform:scale(1.12) rotate(-5deg); }",
   ".sw-wcard-icon { transition:transform 0.4s cubic-bezier(0.34,1.56,0.64,1); display:inline-flex; }",
   ".sw-highlight-tag { transition:all 0.25s; }",
@@ -73,15 +71,15 @@ var CSS = [
 
   /* stat cards */
   ".sw-stat-card { transition:transform 0.3s,box-shadow 0.3s; }",
-  ".sw-stat-card:hover { transform:translateY(-5px);box-shadow:0 16px 36px rgba(14,101,45,0.12) !important; }",
+  ".sw-stat-card:hover { transform:translateY(-5px);box-shadow:0 16px 36px rgba(10,79,34,0.14) !important; }",
 
   /* logo tiles */
   ".sw-logo-tile { transition:all 0.3s cubic-bezier(0.34,1.56,0.64,1); }",
-  ".sw-logo-tile:hover { transform:scale(1.15) rotate(-4deg);background:#e6f4eb !important; }",
+  ".sw-logo-tile:hover { transform:scale(1.15) rotate(-4deg);background:#c8e8d2 !important; }",
 
   /* decorative dots grid */
-  ".sw-dots { background-image:radial-gradient(circle, rgba(14,101,45,0.12) 1.5px, transparent 1.5px);background-size:24px 24px; }",
-  ".sw-dots-blue { background-image:radial-gradient(circle, rgba(31,91,135,0.1) 1.5px, transparent 1.5px);background-size:20px 20px; }",
+  ".sw-dots { background-image:radial-gradient(circle, rgba(10,79,34,0.15) 1.5px, transparent 1.5px);background-size:24px 24px; }",
+  ".sw-dots-blue { background-image:radial-gradient(circle, rgba(23,74,114,0.12) 1.5px, transparent 1.5px);background-size:20px 20px; }",
 
   /* wavy divider */
   ".sw-wave-wrap { line-height:0;overflow:hidden; }",
@@ -100,7 +98,7 @@ var WORKSHOPS = [
     accentBg: T.blueLt,
     accentBorder: T.blueMid,
     accentColor: T.blue,
-    iconBg: '#ddeaf5',
+    iconBg: '#b0cce0',
   },
   {
     Icon: PeopleAltIcon,
@@ -112,7 +110,7 @@ var WORKSHOPS = [
     accentBg: T.greenLt,
     accentBorder: T.greenMid,
     accentColor: T.green,
-    iconBg: '#c8e8d2',
+    iconBg: '#96cead',
   },
   {
     Icon: AutoStoriesIcon,
@@ -122,9 +120,9 @@ var WORKSHOPS = [
     desc: 'Professional development for educators on value-based teaching, classroom management, and student counselling techniques.',
     highlights: ['Value-based teaching', 'Classroom management', 'Student counselling', 'Action planning'],
     accentBg: T.amberLt,
-    accentBorder: '#f5d8a0',
+    accentBorder: '#e8b86d',
     accentColor: T.amber,
-    iconBg: '#fde8b8',
+    iconBg: '#e8c87a',
   },
   {
     Icon: IntegrationInstructionsIcon,
@@ -136,41 +134,31 @@ var WORKSHOPS = [
     accentBg: T.greenLt,
     accentBorder: T.greenMid,
     accentColor: T.green,
-    iconBg: '#c8e8d2',
+    iconBg: '#96cead',
   },
 ];
 
 var STATS = [
-  { num: '20+',    label: 'Schools Partnered',  icon: '🏫', bg: T.blueLt,    col: T.blue  },
-  { num: '2000+',label: 'Students Reached',   icon: '👩‍🎓', bg: T.greenLt,  col: T.green },
-  // { num: '15+',    label: 'Cities Covered',     icon: '📍', bg: T.amberLt,  col: T.amber },
-  { num: '95%',    label: 'Satisfaction Rate',  icon: '🏆', bg: T.blueLt,   col: T.blue  },
+  { num: '20+',   label: 'Schools Partnered', icon: '🏫', bg: T.blueLt,  col: T.blue  },
+  { num: '2000+', label: 'Students Reached',  icon: '👩‍🎓', bg: T.greenLt, col: T.green },
+  { num: '95%',   label: 'Satisfaction Rate', icon: '🏆', bg: T.blueLt,  col: T.blue  },
 ];
 
 var LOGOS = ['🏫','🏛','🎓','📚','🌟','⭐','🏆','🌱','🎯'];
-
-// '🌿'
 
 /* ─── COMPONENT ──────────────────────────────────────────────────────────── */
 export default function SchoolsWorkshops() {
 
   useEffect(function() {
-    /* Hero stagger */
     gsap.fromTo('.sw-hero-anim',
       { opacity: 0, y: 32 },
       { opacity: 1, y: 0, duration: 0.9, stagger: 0.13, ease: 'power3.out', delay: 0.15 }
     );
-
-    /* Floating blobs (continuous) — no scroll trigger needed */
-
-    /* Stats count-up feel */
     gsap.fromTo('.sw-stat-card',
       { opacity: 0, y: 50, scale: 0.9 },
       { opacity: 1, y: 0, scale: 1, duration: 0.7, stagger: 0.1, ease: 'back.out(1.7)',
         scrollTrigger: { trigger: '.sw-stats-grid', start: 'top 82%', once: true } }
     );
-
-    /* Workshop cards — alternate slide in */
     gsap.utils.toArray('.sw-wcard').forEach(function(card, i) {
       gsap.fromTo(card,
         { opacity: 0, x: i % 2 === 0 ? -50 : 50, y: 20 },
@@ -178,8 +166,6 @@ export default function SchoolsWorkshops() {
           scrollTrigger: { trigger: card, start: 'top 85%', once: true, delay: i * 0.05 } }
       );
     });
-
-    /* Section headings */
     gsap.utils.toArray('.sw-section-head').forEach(function(el) {
       gsap.fromTo(el,
         { opacity: 0, y: 28 },
@@ -187,28 +173,21 @@ export default function SchoolsWorkshops() {
           scrollTrigger: { trigger: el, start: 'top 85%', once: true } }
       );
     });
-
-    /* Partners row */
     gsap.fromTo('.sw-logo-tile',
       { opacity: 0, scale: 0.7 },
       { opacity: 1, scale: 1, duration: 0.5, stagger: 0.06, ease: 'back.out(1.8)',
         scrollTrigger: { trigger: '.sw-logos-row', start: 'top 85%', once: true } }
     );
-
-    /* CTA section */
     gsap.fromTo('.sw-cta-inner',
       { opacity: 0, y: 40 },
       { opacity: 1, y: 0, duration: 0.85, ease: 'power2.out',
         scrollTrigger: { trigger: '.sw-cta-inner', start: 'top 88%', once: true } }
     );
-
-    /* Trust strip */
     gsap.fromTo('.sw-trust-item',
       { opacity: 0, y: 20 },
       { opacity: 1, y: 0, duration: 0.6, stagger: 0.1, ease: 'power2.out',
         scrollTrigger: { trigger: '.sw-trust-strip', start: 'top 85%', once: true } }
     );
-
     return function() { ScrollTrigger.getAll().forEach(function(t) { t.kill(); }); };
   }, []);
 
@@ -220,36 +199,31 @@ export default function SchoolsWorkshops() {
         {/* ══ HERO ══════════════════════════════════════════════════════════ */}
         <Box sx={{
           position: 'relative', overflow: 'hidden',
-          background: 'linear-gradient(145deg, #f0faf3 0%, #e8f4ff 55%, #fdf8f0 100%)',
+          background: 'linear-gradient(145deg, #d4edda 0%, #c8dff0 55%, #ece5d6 100%)',
           py: { xs: 10, md: 14 },
         }}>
-          {/* Floating decorative shapes */}
-          <Box sx={{ position:'absolute', top:60, left:'6%', width:120, height:120, borderRadius:'40% 60% 55% 45%', bgcolor:T.greenMid, opacity:0.45, animation:'floatA 8s ease-in-out infinite', pointerEvents:'none' }} />
-          <Box sx={{ position:'absolute', top:'15%', right:'8%', width:90, height:90, borderRadius:'55% 45% 40% 60%', bgcolor:T.blueMid, opacity:0.4, animation:'floatB 10s ease-in-out infinite', pointerEvents:'none' }} />
-          <Box sx={{ position:'absolute', bottom:'18%', left:'12%', width:60, height:60, borderRadius:'50%', bgcolor:'#fde8b8', opacity:0.7, animation:'floatC 7s ease-in-out infinite', pointerEvents:'none' }} />
-          <Box sx={{ position:'absolute', bottom:'10%', right:'15%', width:80, height:80, borderRadius:'45% 55% 60% 40%', bgcolor:T.greenMid, opacity:0.35, animation:'floatA 9s ease-in-out infinite 2s', pointerEvents:'none' }} />
-          {/* Spinning dotted ring */}
-          <Box sx={{ position:'absolute', top:'8%', right:'22%', width:150, height:150, borderRadius:'50%', border:'2px dashed rgba(14,101,45,0.18)', animation:'spinSlow 18s linear infinite', pointerEvents:'none' }} />
-          <Box sx={{ position:'absolute', bottom:'12%', left:'20%', width:100, height:100, borderRadius:'50%', border:'2px dashed rgba(31,91,135,0.15)', animation:'spinSlow 22s linear infinite reverse', pointerEvents:'none' }} />
-          {/* Dots grid */}
+          <Box sx={{ position:'absolute', top:60, left:'6%', width:120, height:120, borderRadius:'40% 60% 55% 45%', bgcolor:T.greenMid, opacity:0.48, animation:'floatA 8s ease-in-out infinite', pointerEvents:'none' }} />
+          <Box sx={{ position:'absolute', top:'15%', right:'8%', width:90, height:90, borderRadius:'55% 45% 40% 60%', bgcolor:T.blueMid, opacity:0.44, animation:'floatB 10s ease-in-out infinite', pointerEvents:'none' }} />
+          <Box sx={{ position:'absolute', bottom:'18%', left:'12%', width:60, height:60, borderRadius:'50%', bgcolor:'#e8c87a', opacity:0.72, animation:'floatC 7s ease-in-out infinite', pointerEvents:'none' }} />
+          <Box sx={{ position:'absolute', bottom:'10%', right:'15%', width:80, height:80, borderRadius:'45% 55% 60% 40%', bgcolor:T.greenMid, opacity:0.40, animation:'floatA 9s ease-in-out infinite 2s', pointerEvents:'none' }} />
+          <Box sx={{ position:'absolute', top:'8%', right:'22%', width:150, height:150, borderRadius:'50%', border:'2px dashed rgba(10,79,34,0.22)', animation:'spinSlow 18s linear infinite', pointerEvents:'none' }} />
+          <Box sx={{ position:'absolute', bottom:'12%', left:'20%', width:100, height:100, borderRadius:'50%', border:'2px dashed rgba(23,74,114,0.18)', animation:'spinSlow 22s linear infinite reverse', pointerEvents:'none' }} />
           <Box className="sw-dots" sx={{ position:'absolute', inset:0, opacity:0.6, pointerEvents:'none' }} />
 
           <Container maxWidth="lg">
             <Box sx={{ textAlign:'center', position:'relative', zIndex:1 }}>
 
-              {/* Badge */}
               <Box className="sw-hero-anim" sx={{
                 display:'inline-flex', alignItems:'center', gap:1, opacity:0,
                 bgcolor:'#fff', border:'1.5px solid ' + T.greenMid,
                 color:T.green, px:2.5, py:1, borderRadius:99, mb:4,
                 fontSize:'0.78rem', fontWeight:700, letterSpacing:'1.8px', textTransform:'uppercase',
-                boxShadow:'0 4px 12px rgba(14,101,45,0.1)',
+                boxShadow:'0 4px 12px rgba(10,79,34,0.14)',
               }}>
                 <span style={{ fontSize:'1rem' }}>🏫</span>
                 Transformative School Programmes
               </Box>
 
-              {/* Headline */}
               <Typography className="sw-hero-anim" variant="h1" sx={{
                 fontFamily:"'Playfair Display', Georgia, serif",
                 color:T.ink, fontSize:{ xs:'2.8rem', md:'4.6rem' },
@@ -257,8 +231,7 @@ export default function SchoolsWorkshops() {
               }}>
                 Schools &amp;{' '}
                 <Box component="span" sx={{
-                  color:T.blue,
-                  background:'linear-gradient(135deg, #1f5b87 0%, #0e652d 100%)',
+                  background:'linear-gradient(135deg, #174a72 0%, #0a4f22 100%)',
                   WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent',
                   backgroundClip:'text',
                 }}>
@@ -266,7 +239,6 @@ export default function SchoolsWorkshops() {
                 </Box>
               </Typography>
 
-              {/* Subline */}
               <Typography className="sw-hero-anim" sx={{
                 color:T.slate, fontSize:{ xs:'1.05rem', md:'1.25rem' },
                 lineHeight:1.8, mb:6, maxWidth:620, mx:'auto', opacity:0, fontWeight:400,
@@ -276,14 +248,13 @@ export default function SchoolsWorkshops() {
                 teachers, and parents across Gujarat.
               </Typography>
 
-              {/* CTAs */}
               <Box className="sw-hero-anim" sx={{ display:'flex', justifyContent:'center', gap:2, flexWrap:'wrap', opacity:0, mb:10 }}>
                 <Link to="/contact" className="sw-btn-blue">
                   <CalendarTodayIcon sx={{ fontSize:18 }} />
                   Schedule a Workshop
                 </Link>
-                <a className="sw-btn-wa" href="https://wa.me/916351113766?text=Hello%2C%20I%20am%20interested%20in%20organizing%20a%20workshop%20at%20our%20school.%20Kindly%20share%20details%20about%20your%20programs%2C%20pricing%2C%20and%20available%20schedules." 
-                  target="_blank" 
+                <a className="sw-btn-wa" href="https://wa.me/916351113766?text=Hello%2C%20I%20am%20interested%20in%20organizing%20a%20workshop%20at%20our%20school.%20Kindly%20share%20details%20about%20your%20programs%2C%20pricing%2C%20and%20available%20schedules."
+                  target="_blank"
                   rel="noreferrer">
                   <WhatsAppIcon sx={{ fontSize:18 }} />
                   WhatsApp Us
@@ -300,11 +271,10 @@ export default function SchoolsWorkshops() {
                           opacity:0, bgcolor:s.bg, border:'1.5px solid',
                           borderColor: i % 2 === 0 ? T.blueMid : T.greenMid,
                           borderRadius:3, p:3, textAlign:'center',
-                          boxShadow:'0 4px 16px rgba(14,101,45,0.07)',
+                          boxShadow:'0 4px 16px rgba(10,79,34,0.10)',
                           position:'relative', overflow:'hidden',
                         }}>
-                          {/* Decorative ring behind */}
-                          <Box sx={{ position:'absolute', bottom:-20, right:-20, width:70, height:70, borderRadius:'50%', border:'2px solid', borderColor: s.col, opacity:0.12, animation:'pulseRing 3s ease-in-out infinite' }} />
+                          <Box sx={{ position:'absolute', bottom:-20, right:-20, width:70, height:70, borderRadius:'50%', border:'2px solid', borderColor: s.col, opacity:0.14, animation:'pulseRing 3s ease-in-out infinite' }} />
                           <Typography sx={{ fontSize:'2rem', mb:0.5 }}>{s.icon}</Typography>
                           <Typography sx={{
                             fontFamily:"'Playfair Display', serif",
@@ -326,17 +296,16 @@ export default function SchoolsWorkshops() {
           </Container>
         </Box>
 
-        {/* ══ WAVE DIVIDER ═════════════════════════════════════════════════ */}
-        <Box className="sw-wave-wrap" sx={{ bgcolor:'linear-gradient(145deg,#f0faf3,#e8f4ff,#fdf8f0)', mt:'-1px' }}>
+        {/* ══ WAVE 1 ════════════════════════════════════════════════════════ */}
+        <Box className="sw-wave-wrap" sx={{ mt:'-1px', bgcolor:'#d4edda' }}>
           <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-            <path d="M0,0 C240,55 480,5 720,30 C960,55 1200,5 1440,30 L1440,60 L0,60 Z" fill="#ffffff" />
+            <path d="M0,0 C240,55 480,5 720,30 C960,55 1200,5 1440,30 L1440,60 L0,60 Z" fill="#f0f7f2" />
           </svg>
         </Box>
 
         {/* ══ PROGRAMME CATALOGUE ══════════════════════════════════════════ */}
-        <Box sx={{ py:{ xs:8, md:12 }, bgcolor:T.white }}>
+        <Box sx={{ py:{ xs:8, md:12 }, bgcolor:'#f0f7f2' }}>
           <Container maxWidth="lg">
-
             <Box className="sw-section-head" sx={{ textAlign:'center', mb:8, opacity:0 }}>
               <Box sx={{ display:'inline-flex', alignItems:'center', gap:1, bgcolor:T.blueLt, color:T.blue, px:2, py:0.75, borderRadius:99, fontSize:'0.75rem', fontWeight:700, letterSpacing:'2px', textTransform:'uppercase', mb:2 }}>
                 Programme Catalogue
@@ -365,23 +334,16 @@ export default function SchoolsWorkshops() {
                       borderColor:w.accentBorder,
                       borderRadius:4,
                       overflow:'hidden',
-                      boxShadow:'0 4px 20px rgba(14,101,45,0.06)',
+                      boxShadow:'0 4px 20px rgba(10,79,34,0.08)',
                       position:'relative',
                     }}>
-                      {/* Top accent bar with gradient */}
                       <Box sx={{ height:5, background:'linear-gradient(90deg, ' + w.accentColor + ' 0%, ' + (w.accentColor === T.amber ? T.green : T.blue) + ' 100%)' }} />
-
-                      {/* Decorative dots in corner */}
                       <Box className="sw-dots" sx={{ position:'absolute', top:0, right:0, width:120, height:120, opacity:0.5, pointerEvents:'none' }} />
 
                       <Box sx={{ p:{ xs:3, md:4 }, position:'relative', zIndex:1 }}>
-                        {/* Header row */}
                         <Box sx={{ display:'flex', justifyContent:'space-between', alignItems:'flex-start', mb:3 }}>
                           <Box sx={{ display:'flex', alignItems:'center', gap:2 }}>
-                            <Box sx={{
-                              bgcolor:w.iconBg, p:1.5, borderRadius:2,
-                              display:'flex', alignItems:'center', justifyContent:'center',
-                            }}>
+                            <Box sx={{ bgcolor:w.iconBg, p:1.5, borderRadius:2, display:'flex', alignItems:'center', justifyContent:'center' }}>
                               <Icon className="sw-wcard-icon" sx={{ fontSize:32, color:w.accentColor }} />
                             </Box>
                             <Box>
@@ -400,12 +362,10 @@ export default function SchoolsWorkshops() {
                           </Box>
                         </Box>
 
-                        {/* Description */}
                         <Typography sx={{ color:T.ash, fontSize:'0.92rem', lineHeight:1.85, mb:3 }}>
                           {w.desc}
                         </Typography>
 
-                        {/* Highlights */}
                         <Box sx={{ display:'flex', flexWrap:'wrap', gap:1 }}>
                           {w.highlights.map(function(h, j) {
                             return (
@@ -430,15 +390,15 @@ export default function SchoolsWorkshops() {
           </Container>
         </Box>
 
-        {/* ══ WAVE DIVIDER 2 ═══════════════════════════════════════════════ */}
+        {/* ══ WAVE 2 ════════════════════════════════════════════════════════ */}
         <Box className="sw-wave-wrap">
           <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-            <path d="M0,30 C360,0 720,60 1080,30 C1260,15 1380,10 1440,0 L1440,60 L0,60 Z" fill="#f0faf3" />
+            <path d="M0,30 C360,0 720,60 1080,30 C1260,15 1380,10 1440,0 L1440,60 L0,60 Z" fill="#daeee2" />
           </svg>
         </Box>
 
-        {/* ══ WHY CHOOSE US / TRUST STRIP ══════════════════════════════════ */}
-        <Box className="sw-trust-strip" sx={{ py:{ xs:7, md:10 }, background:'linear-gradient(135deg, #f0faf3 0%, #eaf4ff 100%)' }}>
+        {/* ══ WHY CHOOSE US ════════════════════════════════════════════════ */}
+        <Box className="sw-trust-strip" sx={{ py:{ xs:7, md:10 }, background:'linear-gradient(135deg, #daeee2 0%, #cce0f0 100%)' }}>
           <Container maxWidth="lg">
             <Box className="sw-section-head" sx={{ textAlign:'center', mb:7, opacity:0 }}>
               <Typography variant="h2" sx={{ fontFamily:"'Playfair Display', serif", color:T.ink, fontSize:{ xs:'2rem', md:'2.8rem' }, fontWeight:600 }}>
@@ -448,19 +408,19 @@ export default function SchoolsWorkshops() {
             </Box>
             <Grid container spacing={3} justifyContent="center">
               {[
-                { icon:'🎯', title:'Goal-Oriented Design', desc:'Every programme is mapped to measurable student outcomes, not just activities.', bg:T.blueLt, border:T.blueMid, col:T.blue },
-                { icon:'📖', title:'Curriculum-Aligned', desc:'Sessions complement existing school curriculum without disrupting schedules.', bg:T.greenLt, border:T.greenMid, col:T.green },
-                { icon:'🤝', title:'School-Wide Support', desc:'We work with students, teachers, and parents for a holistic impact.', bg:T.amberLt, border:'#f5d8a0', col:T.amber },
-                { icon:'📊', title:'Data-Backed Methods', desc:'Assessments use internationally validated psychometric and DMIT tools.', bg:T.blueLt, border:T.blueMid, col:T.blue },
-                { icon:'📍', title:'On-Site Delivery', desc:'Our facilitators travel to your institution — no logistics on your end.', bg:T.greenLt, border:T.greenMid, col:T.green },
-                { icon:'💬', title:'Ongoing Support', desc:'Post-workshop follow-up and resources for continued impact.', bg:T.amberLt, border:'#f5d8a0', col:T.amber },
+                { icon:'🎯', title:'Goal-Oriented Design',   desc:'Every programme is mapped to measurable student outcomes, not just activities.',           bg:T.blueLt,  border:T.blueMid,  col:T.blue  },
+                { icon:'📖', title:'Curriculum-Aligned',     desc:'Sessions complement existing school curriculum without disrupting schedules.',             bg:T.greenLt, border:T.greenMid, col:T.green },
+                { icon:'🤝', title:'School-Wide Support',    desc:'We work with students, teachers, and parents for a holistic impact.',                      bg:T.amberLt, border:'#e8b86d',   col:T.amber },
+                { icon:'📊', title:'Data-Backed Methods',    desc:'Assessments use internationally validated psychometric and DMIT tools.',                   bg:T.blueLt,  border:T.blueMid,  col:T.blue  },
+                { icon:'📍', title:'On-Site Delivery',       desc:'Our facilitators travel to your institution — no logistics on your end.',                  bg:T.greenLt, border:T.greenMid, col:T.green },
+                { icon:'💬', title:'Ongoing Support',        desc:'Post-workshop follow-up and resources for continued impact.',                              bg:T.amberLt, border:'#e8b86d',   col:T.amber },
               ].map(function(item, i) {
                 return (
                   <Grid item xs={12} sm={6} md={4} key={i}>
                     <Box className="sw-trust-item sw-stat-card" sx={{
                       opacity:0, bgcolor:item.bg, border:'1.5px solid ' + item.border,
                       borderRadius:3, p:3, display:'flex', gap:2, alignItems:'flex-start',
-                      boxShadow:'0 2px 12px rgba(14,101,45,0.06)', transition:'all 0.3s',
+                      boxShadow:'0 2px 12px rgba(10,79,34,0.08)', transition:'all 0.3s',
                     }}>
                       <Box sx={{ fontSize:'2rem', flexShrink:0 }}>{item.icon}</Box>
                       <Box>
@@ -479,15 +439,15 @@ export default function SchoolsWorkshops() {
           </Container>
         </Box>
 
-        {/* ══ WAVE DIVIDER 3 ═══════════════════════════════════════════════ */}
+        {/* ══ WAVE 3 ════════════════════════════════════════════════════════ */}
         <Box className="sw-wave-wrap">
           <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-            <path d="M0,0 C480,60 960,0 1440,40 L1440,60 L0,60 Z" fill="#ffffff" />
+            <path d="M0,0 C480,60 960,0 1440,40 L1440,60 L0,60 Z" fill="#f0f7f2" />
           </svg>
         </Box>
 
         {/* ══ TRUSTED BY ═══════════════════════════════════════════════════ */}
-        <Box sx={{ py:{ xs:8, md:12 }, bgcolor:T.white }}>
+        <Box sx={{ py:{ xs:8, md:12 }, bgcolor:'#f0f7f2' }}>
           <Container maxWidth="md" sx={{ textAlign:'center' }}>
             <Box className="sw-section-head" sx={{ opacity:0 }}>
               <Box sx={{ display:'inline-flex', alignItems:'center', gap:1.5, bgcolor:T.amberLt, color:T.amber, px:2, py:0.75, borderRadius:99, fontSize:'0.75rem', fontWeight:700, letterSpacing:'2px', textTransform:'uppercase', mb:3 }}>
@@ -499,22 +459,20 @@ export default function SchoolsWorkshops() {
                 <Box component="span" sx={{ color:T.blue, fontStyle:'italic' }}>10+ Schools</Box>
               </Typography>
               <Typography sx={{ color:T.ash, fontSize:'1.05rem', lineHeight:1.8, mb:6, maxWidth:560, mx:'auto' }}>
-                We have delivered workshops and programmes across leading schools and institutions
-                in Surat.
+                We have delivered workshops and programmes across leading schools and institutions in Surat.
               </Typography>
             </Box>
 
-            {/* Logo tiles */}
             <Box className="sw-logos-row" sx={{ display:'flex', justifyContent:'center', flexWrap:'wrap', gap:2, mb:6 }}>
               {LOGOS.map(function(logo, i) {
                 return (
                   <Box key={i} className="sw-logo-tile" sx={{
                     width:72, height:72, borderRadius:3,
                     bgcolor:i % 3 === 0 ? T.blueLt : i % 3 === 1 ? T.greenLt : T.amberLt,
-                    border:'1.5px solid ' + (i % 3 === 0 ? T.blueMid : i % 3 === 1 ? T.greenMid : '#f5d8a0'),
+                    border:'1.5px solid ' + (i % 3 === 0 ? T.blueMid : i % 3 === 1 ? T.greenMid : '#e8b86d'),
                     display:'flex', alignItems:'center', justifyContent:'center',
                     fontSize:'2rem', cursor:'default',
-                    boxShadow:'0 2px 8px rgba(14,101,45,0.07)',
+                    boxShadow:'0 2px 8px rgba(10,79,34,0.10)',
                     opacity:0,
                   }}>
                     {logo}
@@ -523,13 +481,12 @@ export default function SchoolsWorkshops() {
               })}
             </Box>
 
-            {/* Testimonial strip */}
             <Box sx={{
               bgcolor:T.greenLt, border:'1.5px solid ' + T.greenMid,
               borderRadius:3, p:3.5, maxWidth:560, mx:'auto',
               position:'relative', overflow:'hidden',
             }}>
-              <Box sx={{ position:'absolute', top:8, left:14, fontFamily:'Georgia,serif', fontSize:'4rem', color:T.green, opacity:0.12, lineHeight:1 }}>
+              <Box sx={{ position:'absolute', top:8, left:14, fontFamily:'Georgia,serif', fontSize:'4rem', color:T.green, opacity:0.14, lineHeight:1 }}>
                 &ldquo;
               </Box>
               <Typography sx={{ fontFamily:"'Playfair Display', serif", fontStyle:'italic', color:T.ink, fontSize:'1.05rem', lineHeight:1.7, mb:1.5, position:'relative', zIndex:1 }}>
@@ -542,28 +499,27 @@ export default function SchoolsWorkshops() {
           </Container>
         </Box>
 
-        {/* ══ WAVE DIVIDER 4 ═══════════════════════════════════════════════ */}
+        {/* ══ WAVE 4 ════════════════════════════════════════════════════════ */}
         <Box className="sw-wave-wrap">
           <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-            <path d="M0,20 C300,60 700,0 1100,40 C1280,55 1380,45 1440,30 L1440,60 L0,60 Z" fill="#eaf5ee" />
+            <path d="M0,20 C300,60 700,0 1100,40 C1280,55 1380,45 1440,30 L1440,60 L0,60 Z" fill="#d4e9dd" />
           </svg>
         </Box>
 
         {/* ══ BOTTOM CTA ═══════════════════════════════════════════════════ */}
         <Box sx={{
           py:{ xs:10, md:14 },
-          background:'linear-gradient(145deg, #eaf5ee 0%, #e4eef6 50%, #fdf8f0 100%)',
+          background:'linear-gradient(145deg, #d4e9dd 0%, #ccdce8 50%, #ece5d6 100%)',
           position:'relative', overflow:'hidden',
           textAlign:'center',
         }}>
-          {/* Floating shapes */}
-          <Box sx={{ position:'absolute', top:'10%', left:'5%', width:100, height:100, borderRadius:'50%', bgcolor:T.greenMid, opacity:0.3, animation:'floatA 10s ease-in-out infinite', pointerEvents:'none' }} />
-          <Box sx={{ position:'absolute', bottom:'15%', right:'6%', width:80, height:80, borderRadius:'55% 45% 40% 60%', bgcolor:T.blueMid, opacity:0.3, animation:'floatB 8s ease-in-out infinite', pointerEvents:'none' }} />
+          <Box sx={{ position:'absolute', top:'10%', left:'5%', width:100, height:100, borderRadius:'50%', bgcolor:T.greenMid, opacity:0.36, animation:'floatA 10s ease-in-out infinite', pointerEvents:'none' }} />
+          <Box sx={{ position:'absolute', bottom:'15%', right:'6%', width:80, height:80, borderRadius:'55% 45% 40% 60%', bgcolor:T.blueMid, opacity:0.34, animation:'floatB 8s ease-in-out infinite', pointerEvents:'none' }} />
           <Box className="sw-dots-blue" sx={{ position:'absolute', inset:0, opacity:0.5, pointerEvents:'none' }} />
 
           <Container maxWidth="md" sx={{ position:'relative', zIndex:1 }}>
             <Box className="sw-cta-inner" sx={{ opacity:0 }}>
-              <Box sx={{ display:'inline-flex', alignItems:'center', gap:1, bgcolor:T.white, color:T.green, px:2.5, py:1, borderRadius:99, fontSize:'0.78rem', fontWeight:700, letterSpacing:'2px', textTransform:'uppercase', mb:3, boxShadow:'0 4px 14px rgba(14,101,45,0.12)', border:'1.5px solid ' + T.greenMid }}>
+              <Box sx={{ display:'inline-flex', alignItems:'center', gap:1, bgcolor:T.white, color:T.green, px:2.5, py:1, borderRadius:99, fontSize:'0.78rem', fontWeight:700, letterSpacing:'2px', textTransform:'uppercase', mb:3, boxShadow:'0 4px 14px rgba(10,79,34,0.14)', border:'1.5px solid ' + T.greenMid }}>
                 Ready to Partner?
               </Box>
 
@@ -580,8 +536,8 @@ export default function SchoolsWorkshops() {
               </Typography>
 
               <Box sx={{ display:'flex', justifyContent:'center', gap:2.5, flexWrap:'wrap', mb:5 }}>
-                <a className="sw-btn-green-pill" href="https://wa.me/916351113766?text=Hello%2C%20I%20would%20like%20to%20understand%20which%20program%20would%20be%20best%20for%20me%2Fmy%20child.%20Could%20you%20please%20guide%20me%3F" 
-                  target="_blank" 
+                <a className="sw-btn-green-pill" href="https://wa.me/916351113766?text=Hello%2C%20I%20would%20like%20to%20understand%20which%20program%20would%20be%20best%20for%20me%2Fmy%20child.%20Could%20you%20please%20guide%20me%3F"
+                  target="_blank"
                   rel="noreferrer">
                   <WhatsAppIcon sx={{ fontSize:20 }} />
                   Chat on WhatsApp
@@ -592,7 +548,6 @@ export default function SchoolsWorkshops() {
                 </Link>
               </Box>
 
-              {/* Micro trust row */}
               <Box sx={{ display:'flex', justifyContent:'center', gap:{ xs:2, sm:4 }, flexWrap:'wrap' }}>
                 {['50+ schools trust us', 'Free consultation', 'Custom programmes'].map(function(t, i) {
                   return (
