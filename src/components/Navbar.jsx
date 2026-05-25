@@ -59,12 +59,11 @@ export default function Navbar() {
         elevation={scrolled ? 2 : 0}
         sx={{
           background: scrolled 
-  ? '#d4edda'   // or '#c8dff0' – whichever you prefer
-  : 'linear-gradient(145deg, #d4edda 0%, #c8dff0 100%)',
+            ? '#8bb382'   // Much darker when scrolled
+            : 'linear-gradient(145deg, #8bb382 0%, #89b0c4 100%)', // Much darker gradient
           backdropFilter: 'blur(10px)',
-          // borderBottom: '1px solid rgba(0,0,0,0.05)',
           transition: 'all 0.4s ease',
-          boxShadow: scrolled ? '0 4px 20px rgba(0,0,0,0.06)' : 'none',
+          boxShadow: scrolled ? '0 4px 20px rgba(0,0,0,0.15)' : 'none',
         }}
       >
         <Container maxWidth="xl">
@@ -86,7 +85,7 @@ export default function Navbar() {
                 alignItems: 'center', 
                 textDecoration: 'none',
                 position: 'absolute',
-                left: '210px', // Increased from 0 to 80px to move logo right
+                left: '210px',
               }}
             >
               <Box
@@ -121,7 +120,7 @@ export default function Navbar() {
                     component={Link}
                     to={link.path}
                     sx={{
-                      color: location.pathname === link.path ? '#0e652d' : '#4a5568',
+                      color: location.pathname === link.path ? '#ffffff' : '#2d3a2e',
                       fontSize: '0.78rem',
                       fontWeight: location.pathname === link.path ? 700 : 500,
                       letterSpacing: '0.06em',
@@ -138,13 +137,13 @@ export default function Navbar() {
                         transform: location.pathname === link.path ? 'translateX(-50%) scaleX(1)' : 'translateX(-50%) scaleX(0)',
                         width: '60%',
                         height: '2px',
-                        background: '#0e652d',
+                        background: '#ffffff',
                         transition: 'transform 0.3s ease',
                         borderRadius: '2px',
                       },
                       '&:hover': {
-                        background: 'rgba(14,101,45,0.06)',
-                        color: '#0e652d',
+                        background: 'rgba(255,255,255,0.12)',
+                        color: '#ffffff',
                         '&::after': { transform: 'translateX(-50%) scaleX(1)' },
                       },
                       transition: 'all 0.25s ease',
@@ -166,10 +165,11 @@ export default function Navbar() {
                   position: 'absolute',
                   right: '120px',
                   fontSize: '0.75rem',
-                  bgcolor: '#0e652d',
+                  bgcolor: '#2c5e2a',
                   flexShrink: 0,
+                  color: '#ffffff',
                   '&:hover': {
-                    bgcolor: '#0a4d22',
+                    bgcolor: '#1e451d',
                   }
                 }}
               >
@@ -182,7 +182,7 @@ export default function Navbar() {
               <IconButton 
                 onClick={() => setDrawerOpen(true)} 
                 sx={{ 
-                  color: '#0e652d',
+                  color: '#ffffff',
                   position: 'absolute',
                   right: 0,
                 }}
@@ -201,7 +201,7 @@ export default function Navbar() {
           PaperProps={{
             sx: {
               width: 280,
-              background: 'linear-gradient(180deg, #0e652d 0%, #4CAF50 100%)',
+              background: 'linear-gradient(180deg, #2c5e2a 0%, #3a6e3a 100%)',
               color: 'white',
             }
           }}
@@ -275,7 +275,7 @@ export default function Navbar() {
               onClick={() => setDrawerOpen(false)}
               sx={{
                 bgcolor: 'white',
-                color: '#0e652d',
+                color: '#2c5e2a',
                 '&:hover': {
                   bgcolor: 'rgba(255,255,255,0.9)',
                 }
