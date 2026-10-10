@@ -6,19 +6,19 @@ function Test() {
 
   const testUrls = {
     "commerce-script":
-      "https://www.careerguide.com/assessment/integration/commerce-assessment.aspx?hide_head=1&utm_source=partner_assessment&utm_campaign=school2campus&utm_medium=school2campus",
+      "https://www.careerguide.com/assessment/integration/commerce-assessment.aspx?hide_head=1&utm_source=partner_assessment&utm_campaign=paavansetu&utm_medium=paavansetu",
 
     "stream-test":
-      "https://www.careerguide.com/assessment/integration/stream-suggestor.aspx?hide_head=1&utm_source=partner_assessment&utm_campaign=school2campus&utm_medium=school2campus",
+      "https://www.careerguide.com/assessment/integration/stream-suggestor.aspx?hide_head=1&utm_source=partner_assessment&utm_campaign=paavansetu&utm_medium=paavansetu",
 
     "engineering-script":
-      "https://www.careerguide.com/assessment/integration/engineering-branch-assessment.aspx?hide_head=1&utm_source=partner_assessment&utm_campaign=school2campus&utm_medium=school2campus",
+      "https://www.careerguide.com/assessment/integration/engineering-branch-assessment.aspx?hide_head=1&utm_source=partner_assessment&utm_campaign=paavansetu&utm_medium=paavansetu",
 
     "humanities-script":
-      "https://www.careerguide.com/assessment/integration/humanities-assessment.aspx?hide_head=1&utm_source=partner_assessment&utm_campaign=school2campus&utm_medium=school2campus",
+      "https://www.careerguide.com/assessment/integration/humanities-assessment.aspx?hide_head=1&utm_source=partner_assessment&utm_campaign=paavansetu&utm_medium=paavansetu",
 
     "ideal-career-test":
-      "https://www.careerguide.com/assessment/integration/ideal-career-test.aspx?hide_head=1&utm_source=partner_assessment&utm_campaign=megamindonline&utm_medium=megamindonline"
+      "https://www.careerguide.com/assessment/integration/ideal-career-test.aspx?hide_head=1&utm_source=partner_assessment&utm_campaign=paavansetu&utm_medium=paavansetu"
   };
 
   const selectedUrl =
